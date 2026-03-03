@@ -1,0 +1,28 @@
+---
+import SubPageLayout from '../../components/SubPageLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+const menuItems = [
+  { id: "2", label: "公司簡介", href: `${base}about/2` },
+  { id: "7", label: "寶得利大事紀", href: `${base}about/7` },
+  { id: "4", label: "經營團隊", href: `${base}about/4` },
+  { id: "5", label: "113年之計劃與發展", href: `${base}about/5` },
+];
+---
+
+<SubPageLayout
+  title="113年之計劃與發展"
+  titleEn="About CJW"
+  titleTw="關於寶得利"
+  menuItems={menuItems}
+  activeId="5"
+>
+  <p><span style="font-size:medium"><span style="font-family:Calibri,sans-serif"><span style="color:#000000"><span style="font-size:20pt"><span style="font-family:STKaiti"><img alt="" src="/cjwtw-website/images/upload/2022_05_25_231702(5).jpg" style="height:300px; width:900px" /></span></span></span></span></span></p>
+
+<p><span style="font-size:18px">展望 113 年，全球開放解封，有助觀光產業及餐飲業回溫，未來將強化觀光購物站經營，作為接待國際觀光客之購物商場，以滿足觀光客多元化的需求，本公司對市場及未來環境做出準確的掌握與判斷，擬定正確的發展策略與具體可行的方案，協調一致的有效 作為與執行力，是寶得利國際主要的營運方向與經營方針。</span></p>
+
+<p><span style="font-size:18px">未來本公司在準確、具體可行的營運發展策略指領下，寶得利國際為消費者提供優質 服務，為同仁建立幸福感，寶得利國際有信心能持續強化成長動能並全力以赴， 期能回饋股東，為股東創造更高價值，以及邁向永續經營的美好願景。</span></p>
+
+<h4> </h4>
+
+</SubPageLayout>

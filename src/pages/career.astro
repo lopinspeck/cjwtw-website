@@ -1,18 +1,12 @@
 ---
 import SubPageLayout from '../components/SubPageLayout.astro';
-import { langData } from '../data/lang.js';
-import { decodeHtml } from '../data/decode.js';
-import pagesData from '../data/pages.json';
 
 const base = import.meta.env.BASE_URL;
 const menuItems = [
-  { id: 'hr', label: langData[11].tw, href: `${base}hr` },
-  { id: 'career', label: langData[12].tw, href: `${base}career` },
-  { id: 'csr-report', label: langData[13].tw, href: `${base}csr-report` },
+  { id: 'hr', label: '人力資源', href: `${base}hr` },
+  { id: 'career', label: '人才招募', href: `${base}career` },
+  { id: 'csr-report', label: '報告書下載', href: `${base}csr-report` },
 ];
-
-const pageContent = pagesData['career.html'];
-const contentHtml = pageContent ? decodeHtml(pageContent.a_text_tw) : '<p>人才招募相關資訊</p>';
 ---
 
 <SubPageLayout
@@ -22,5 +16,5 @@ const contentHtml = pageContent ? decodeHtml(pageContent.a_text_tw) : '<p>人才
   menuItems={menuItems}
   activeId="career"
 >
-  <div set:html={contentHtml} />
+  <p>111</p>
 </SubPageLayout>
