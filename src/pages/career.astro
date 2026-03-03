@@ -1,0 +1,25 @@
+---
+import SubPageLayout from '../components/SubPageLayout.astro';
+import { langData } from '../data/lang.js';
+import { decodeHtml } from '../data/decode.js';
+import pagesData from '../data/pages.json';
+
+const menuItems = [
+  { id: 'hr', label: langData[11].tw, href: '/hr' },
+  { id: 'career', label: langData[12].tw, href: '/career' },
+  { id: 'csr-report', label: langData[13].tw, href: '/csr-report' },
+];
+
+const pageContent = pagesData['career.html'];
+const contentHtml = pageContent ? decodeHtml(pageContent.a_text_tw) : '<p>人才招募相關資訊</p>';
+---
+
+<SubPageLayout
+  title="人才招募"
+  titleEn="CSR"
+  titleTw="企業社會責任"
+  menuItems={menuItems}
+  activeId="career"
+>
+  <div set:html={contentHtml} />
+</SubPageLayout>

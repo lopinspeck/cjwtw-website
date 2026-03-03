@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Banner from '../components/Banner.astro';
+import { videoData } from '../data/lang.js';
+---
+
+<Layout title="影音專區" pageClass="video_page">
+  <Banner titleEn="Video Zone" titleTw="影音專區" />
+  <main class="max-w-7xl mx-auto px-4 py-10 lg:py-16">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {Object.entries(videoData).map(([id, item]) => (
+        <div class="video-card bg-white rounded-lg shadow overflow-hidden cursor-pointer group" data-video={item.video}>
+          <div class="aspect-video bg-primary/5 flex items-center justify-center relative">
+            <div class="absolute inset-0 flex items-center justify-center bg-primary/20 group-hover:bg-primary/40 transition-colors">
+              <svg class="w-16 h-16 text-white/80" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="text-primary font-bold">{item.tw}</h3>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="fixed inset-0 z-[100] bg-black/80 hidden items-center justify-center">
+      <div class="relative w-full max-w-4xl mx-4">
+        <button id="close-modal" class="absolute -top-10 right-0 text-white text-3xl hover:text-gold">&times;</button>
+        <div id="video-container" class="aspect-video bg-black rounded-lg overflow-hidden"></div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<script>
+  const modal = document.getElementById('video-modal');
+  const container = document.getElementById('video-container');
+  const closeBtn = document.getElementById('close-modal');
+
+  document.querySelectorAll('.video-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const videoUrl = card.dataset.video;
+      if (videoUrl && container && modal) {
+        container.innerHTML = `<iframe src="${videoUrl}" class="w-full h-full" frameborder="0" allowfullscreen></iframe>`;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    });
+  });
+
+  closeBtn?.addEventListener('click', () => {
+    if (modal && container) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      container.innerHTML = '';
+    }
+  });
+
+  modal?.addEventListener('click', (e) => {
+    if (e.target === modal && container) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      container.innerHTML = '';
+    }
+  });
+</script>

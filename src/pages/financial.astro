@@ -1,0 +1,107 @@
+---
+import SubPageLayout from '../components/SubPageLayout.astro';
+import { langData } from '../data/lang.js';
+
+const menuItems = [
+  { id: 'financial', label: langData[4].tw, href: '/financial' },
+  { id: 'investor', label: langData[5].tw, href: '/investor' },
+  { id: 'investor-info', label: langData[6].tw, href: '/investor-info' },
+];
+
+const reports = [
+  {
+    title: '114年度及期中報告',
+    files: [
+      { name: '114年2025Q3_5301合併報表', href: '/upload/2025_11_30_1114530.pdf' },
+      { name: '114年2025Q2_5301合併報表', href: '/upload/2025_11_30_1112050.pdf' },
+      { name: '114年2025Q1_5301合併報表', href: '/upload/2025_11_30_1111380.pdf' },
+    ],
+  },
+  {
+    title: '113年度及期中報告',
+    files: [
+      { name: '113年2024Q4_5301合併報表', href: '/upload/2025_11_30_1123150.pdf' },
+      { name: '113年2024Q3_5301合併報表', href: '/upload/2025_11_30_1123320.pdf' },
+      { name: '113年2024Q2_5301合併報表', href: '/upload/2024_11_22_1139480.pdf' },
+      { name: '113年2023Q1_5301合併報表', href: '/upload/2024_11_22_1139280.pdf' },
+    ],
+  },
+  {
+    title: '112年度及期中報告',
+    files: [
+      { name: '112年2023Q4_5301合併報表', href: '/upload/2024_11_22_1142300.pdf' },
+      { name: '112年2023Q3_5301合併報表', href: '/upload/2024_11_22_1142520.pdf' },
+      { name: '112年2023Q2_5301合併報表', href: '/upload/2024_11_22_1143110.pdf' },
+      { name: '112年2023Q1_5301合併報表', href: '/upload/2024_11_22_1143300.pdf' },
+    ],
+  },
+  {
+    title: '111年度及期中報告',
+    files: [
+      { name: '111年2022Q4_5301合併報表', href: '/upload/2024_11_22_1529060.pdf' },
+      { name: '111年2022Q3_5301合併報表', href: '/upload/2024_11_22_1529320.pdf' },
+      { name: '111年2022Q2_5301合併報表', href: '/upload/2024_11_22_1530020.pdf' },
+      { name: '111年2022Q1_5301合併報表', href: '/upload/2024_11_22_1530360.pdf' },
+    ],
+  },
+  {
+    title: '110年度及期中報告',
+    files: [
+      { name: '110年2021Q4_5301合併報表', href: '/upload/2022_05_10_1243360.pdf' },
+      { name: '110年2021Q3_5301合併報表', href: '/upload/2022_05_10_1245260.pdf' },
+      { name: '110年2021Q2_5301合併報表', href: '/upload/2022_05_10_1247190.pdf' },
+      { name: '110年2021Q1_5301合併報表', href: '/upload/2022_05_04_0935070.pdf' },
+    ],
+  },
+  {
+    title: '109年度及期中報告',
+    files: [
+      { name: '109年2020Q4_5301合併報表', href: '/upload/2022_05_10_1359170.pdf' },
+      { name: '109年2020Q3_5301合併報表', href: '/upload/2022_05_10_1405060.pdf' },
+      { name: '109年2020Q2_5301合併報表', href: '/upload/2022_05_10_1359400.pdf' },
+      { name: '109年2020Q1_5301合併報表', href: '/upload/2022_05_10_1404280.pdf' },
+    ],
+  },
+];
+---
+
+<SubPageLayout
+  title="財務業務資訊"
+  titleEn="Investor Zone"
+  titleTw="投資人專區"
+  menuItems={menuItems}
+  activeId="financial"
+  pageClass="financial_page"
+>
+  <!-- 年度及期中報告 -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-primary border-b-2 border-gold pb-2 mb-6">{langData[19].tw}</h2>
+    <div class="space-y-6">
+      {reports.map((group) => (
+        <details class="group border border-gray-200 rounded-lg" open>
+          <summary class="px-6 py-4 cursor-pointer font-bold text-primary hover:text-gold transition-colors flex justify-between items-center">
+            {group.title}
+            <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <div class="px-6 pb-4 space-y-2">
+            {group.files.map((file) => (
+              <a href={file.href} target="_blank" class="block text-primary/70 hover:text-gold transition-colors py-1">
+                <svg class="w-4 h-4 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                {file.name}
+              </a>
+            ))}
+          </div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <!-- 重大訊息 -->
+  <section>
+    <h2 class="text-2xl font-bold text-primary border-b-2 border-gold pb-2 mb-6">{langData[20].tw}</h2>
+    <div class="prose max-w-none">
+      <h4>重大訊息</h4>
+      <p>寶得利國際股份有限公司係於1990年6月於中華民國證券櫃檯買賣中心掛牌上櫃 (股票代號: 5301)，投資相關資訊請至公開資訊觀測站網站參閱 查詢頁面請依下述步驟 公司代號：5301→ 年度：110年 → 月份：全年度 → 搜尋</p>
+    </div>
+  </section>
+</SubPageLayout>

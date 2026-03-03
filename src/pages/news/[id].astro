@@ -1,0 +1,35 @@
+---
+import SubPageLayout from '../../components/SubPageLayout.astro';
+import { newsData } from '../../data/lang.js';
+import { decodeHtml } from '../../data/decode.js';
+import pagesData from '../../data/pages.json';
+
+export function getStaticPaths() {
+  return [
+    { params: { id: '1' } },
+    { params: { id: '3' } },
+    { params: { id: '5' } },
+  ];
+}
+
+const { id } = Astro.params;
+const menuItems = Object.entries(newsData).map(([key, val]) => ({
+  id: key,
+  label: val.tw,
+  href: `/news/${key}`,
+}));
+
+const fileMap = { '1': 'news-1.html', '3': 'news-3.html', '5': 'news-5.html' };
+const pageContent = pagesData[fileMap[id]];
+const contentHtml = pageContent ? decodeHtml(pageContent.n_text_tw) : '';
+---
+
+<SubPageLayout
+  title={newsData[id]?.tw}
+  titleEn="NEWS"
+  titleTw="新消息"
+  menuItems={menuItems}
+  activeId={id}
+>
+  <div set:html={contentHtml} />
+</SubPageLayout>

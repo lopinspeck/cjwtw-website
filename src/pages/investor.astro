@@ -1,0 +1,122 @@
+---
+import SubPageLayout from '../components/SubPageLayout.astro';
+import { langData } from '../data/lang.js';
+import { decodeHtml } from '../data/decode.js';
+
+const menuItems = [
+  { id: 'financial', label: langData[4].tw, href: '/financial' },
+  { id: 'investor', label: langData[5].tw, href: '/investor' },
+  { id: 'investor-info', label: langData[6].tw, href: '/investor-info' },
+];
+
+const meetings = [
+  {
+    title: '113年股東會',
+    files: [
+      { name: '113年股東會議事錄', href: '/upload/2024_11_22_1640570.pdf' },
+      { name: '112年年報', href: '#' },
+      { name: '113年股東會議事手冊', href: '/upload/2024_11_22_1641220.pdf' },
+      { name: '113年開會通知', href: '/upload/2024_11_22_1641410.pdf' },
+    ],
+  },
+  {
+    title: '112年股東會',
+    files: [
+      { name: '112年股東會議事錄', href: '/upload/2024_11_22_1545440.pdf' },
+      { name: '111年年報', href: '/upload/2024_11_22_1544470.pdf' },
+      { name: '112年股東會議事手冊', href: '/upload/2024_11_22_1544130.pdf' },
+      { name: '112年開會通知', href: '/upload/2024_11_22_1543520.pdf' },
+    ],
+  },
+  {
+    title: '111年股東會',
+    files: [
+      { name: '111年股東會議事錄', href: '/upload/2024_11_22_1536290.pdf' },
+      { name: '110年年報', href: '/upload/2024_11_22_1537010.pdf' },
+      { name: '111年股東會議事手冊', href: '/upload/2024_11_22_1537180.pdf' },
+      { name: '111年開會通知', href: '/upload/2024_11_22_1537410.pdf' },
+    ],
+  },
+  {
+    title: '110年股東會',
+    files: [
+      { name: '110年股東會議事錄', href: '#' },
+      { name: '109年股東會年報', href: '#' },
+      { name: '110年議事手冊', href: '#' },
+      { name: '110年開會通知', href: '#' },
+    ],
+  },
+  {
+    title: '109年股東會',
+    files: [
+      { name: '109年開會通知', href: '#' },
+      { name: '109年股東會議事手冊', href: '#' },
+      { name: '109年年報', href: '#' },
+      { name: '109年股東會議事錄', href: '#' },
+    ],
+  },
+];
+---
+
+<SubPageLayout
+  title="股東會及股利資訊"
+  titleEn="Investor Zone"
+  titleTw="投資人專區"
+  menuItems={menuItems}
+  activeId="investor"
+  pageClass="financial_page"
+>
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-primary border-b-2 border-gold pb-2 mb-6">{langData[21].tw}</h2>
+    <div class="space-y-6">
+      {meetings.map((group) => (
+        <details class="group border border-gray-200 rounded-lg" open>
+          <summary class="px-6 py-4 cursor-pointer font-bold text-primary hover:text-gold transition-colors flex justify-between items-center">
+            {group.title}
+            <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <div class="px-6 pb-4 space-y-2">
+            {group.files.map((file) => (
+              <a href={file.href} target="_blank" class="block text-primary/70 hover:text-gold transition-colors py-1">
+                <svg class="w-4 h-4 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                {file.name}
+              </a>
+            ))}
+          </div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section>
+    <h2 class="text-2xl font-bold text-primary border-b-2 border-gold pb-2 mb-6">{langData[22].tw}</h2>
+    <div class="prose max-w-none">
+      <p>股利政策及歷年股利分派</p>
+      <p>本公司年度決算如有盈餘應先提應繳稅捐，依法彌補虧損後，提列百分之十為法定盈餘公積；但法定盈餘公積累積已達公司實收資本額時得繼續提列，並視營運需要及法令規定提列特別盈餘公積後，由董事會擬定盈餘分配案，提請股東會決議分派之，惟分派時，員工紅利為百分之一以上，董監酬勞不高於百分之五。</p>
+      <table class="min-w-full border-collapse border border-gray-300 text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border border-gray-300 px-3 py-2" rowspan="2">股利年度</th>
+            <th class="border border-gray-300 px-3 py-2" rowspan="2">股東會日期</th>
+            <th class="border border-gray-300 px-3 py-2" colspan="3">現金股利(元/股)</th>
+            <th class="border border-gray-300 px-3 py-2" colspan="4">股票股利(元/股)</th>
+          </tr>
+          <tr class="bg-gray-100">
+            <th class="border border-gray-300 px-2 py-1">股利</th>
+            <th class="border border-gray-300 px-2 py-1">除息基準日</th>
+            <th class="border border-gray-300 px-2 py-1">發放日</th>
+            <th class="border border-gray-300 px-2 py-1">盈餘配股</th>
+            <th class="border border-gray-300 px-2 py-1">資本公積配股</th>
+            <th class="border border-gray-300 px-2 py-1">除權基準日</th>
+            <th class="border border-gray-300 px-2 py-1">發放日</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="border border-gray-300 px-3 py-2 text-center">2023</td><td class="border border-gray-300 px-3 py-2 text-center">2024/06/28</td><td class="border border-gray-300 px-3 py-2 text-center">-</td><td class="border border-gray-300 px-3 py-2 text-center">-</td><td class="border border-gray-300 px-3 py-2 text-center">-</td><td class="border border-gray-300 px-3 py-2 text-center">-</td><td class="border border-gray-300 px-3 py-2 text-center">-</td><td class="border border-gray-300 px-3 py-2 text-center">-</td><td class="border border-gray-300 px-3 py-2 text-center">-</td></tr>
+          <tr><td class="border border-gray-300 px-3 py-2 text-center">2022</td><td class="border border-gray-300 px-3 py-2 text-center">2023/06/26</td><td class="border border-gray-300 px-3 py-2 text-center">-</td><td class="border border-gray-300 px-3 py-2 text-center">-</td><td class="border border-gray-300 px-3 py-2 text-center">-</td><td class="border border-gray-300 px-3 py-2 text-center">-</td><td class="border border-gray-300 px-3 py-2 text-center">-</td><td class="border border-gray-300 px-3 py-2 text-center">-</td><td class="border border-gray-300 px-3 py-2 text-center">-</td></tr>
+          <tr><td class="border border-gray-300 px-3 py-2 text-center">2021</td><td class="border border-gray-300 px-3 py-2 text-center">2022/06/29</td><td class="border border-gray-300 px-3 py-2 text-center">-</td><td class="border border-gray-300 px-3 py-2 text-center">-</td><td class="border border-gray-300 px-3 py-2 text-center">-</td><td class="border border-gray-300 px-3 py-2 text-center">-</td><td class="border border-gray-300 px-3 py-2 text-center">-</td><td class="border border-gray-300 px-3 py-2 text-center">-</td><td class="border border-gray-300 px-3 py-2 text-center">-</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</SubPageLayout>

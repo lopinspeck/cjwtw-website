@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Banner from './Banner.astro';
+import SideMenu from './SideMenu.astro';
+
+interface MenuItem {
+  id: string | number;
+  label: string;
+  href: string;
+}
+
+interface Props {
+  title?: string;
+  pageClass?: string;
+  titleEn: string;
+  titleTw: string;
+  menuItems: MenuItem[];
+  activeId: string | number;
+}
+
+const { title, pageClass = 'about_page', titleEn, titleTw, menuItems, activeId } = Astro.props;
+---
+
+<Layout title={title || titleTw} pageClass={pageClass}>
+  <Banner titleEn={titleEn} titleTw={titleTw} />
+  <main class="max-w-7xl mx-auto px-4 py-10 lg:py-16">
+    <div class="flex flex-col lg:flex-row gap-8">
+      <SideMenu items={menuItems} activeId={activeId} />
+      <div class="flex-1 min-w-0">
+        <div class="prose prose-lg max-w-none">
+          <slot />
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

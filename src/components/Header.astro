@@ -1,0 +1,115 @@
+---
+import { langData, aboutData, comData, navItems } from '../data/lang.js';
+
+const dataMap = { about: aboutData, com: comData };
+
+function getLabel(item) {
+  if (item.dataKey && item.id) {
+    return dataMap[item.dataKey]?.[item.id]?.tw || '';
+  }
+  return langData[item.labelKey]?.tw || '';
+}
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-primary shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16 lg:h-20">
+    <!-- Logo -->
+    <a href="/" class="flex-shrink-0">
+      <img src="/images/logo.svg" alt="寶得利國際" class="h-10 lg:h-12" />
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden lg:flex items-center gap-1 text-sm">
+      {navItems.map((item) => (
+        <div class="relative group">
+          {item.href ? (
+            <a href={item.href} class="lang-nav px-3 py-2 text-white hover:text-gold transition-colors" data-lang-key={item.labelKey}>
+              {langData[item.labelKey]?.tw}
+            </a>
+          ) : (
+            <a href="javascript:;" class="lang-nav px-3 py-2 text-white hover:text-gold transition-colors" data-lang-key={item.labelKey}>
+              {langData[item.labelKey]?.tw}
+            </a>
+          )}
+          {item.children && (
+            <div class="absolute top-full left-0 bg-primary/95 backdrop-blur min-w-[200px] py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-xl">
+              {item.children.map((child) => (
+                <a href={child.href} class="block px-4 py-2 text-white/80 hover:text-gold hover:bg-white/5 transition-colors text-sm">
+                  {getLabel(child)}
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+    </nav>
+
+    <!-- Language + Hamburger -->
+    <div class="flex items-center gap-4">
+      <div class="flex gap-1 text-sm">
+        <button class="lang-btn text-gold border border-gold px-2 py-0.5 rounded text-xs active" data-lang="tw">繁中</button>
+        <button class="lang-btn text-white/60 border border-white/30 px-2 py-0.5 rounded text-xs" data-lang="en">EN</button>
+      </div>
+      <button id="hamburger" class="lg:hidden text-white w-8 h-8 flex flex-col justify-center items-center gap-1.5">
+        <span class="block w-6 h-0.5 bg-current transition-all hamburger-line"></span>
+        <span class="block w-6 h-0.5 bg-current transition-all hamburger-line"></span>
+        <span class="block w-6 h-0.5 bg-current transition-all hamburger-line"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="lg:hidden hidden bg-primary/98 backdrop-blur max-h-[80vh] overflow-y-auto">
+    <div class="px-4 py-4 space-y-1">
+      {navItems.map((item) => (
+        <div class="mobile-nav-group">
+          {item.href ? (
+            <a href={item.href} class="block px-4 py-3 text-white hover:text-gold transition-colors">
+              {langData[item.labelKey]?.tw}
+            </a>
+          ) : (
+            <button class="mobile-nav-toggle w-full text-left px-4 py-3 text-white hover:text-gold transition-colors flex justify-between items-center">
+              <span>{langData[item.labelKey]?.tw}</span>
+              <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+          )}
+          {item.children && (
+            <div class="mobile-submenu hidden pl-4 space-y-1">
+              {item.children.map((child) => (
+                <a href={child.href} class="block px-4 py-2 text-white/70 hover:text-gold text-sm transition-colors">
+                  {getLabel(child)}
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</header>
+
+<!-- Spacer for fixed header -->
+<div class="h-16 lg:h-20"></div>
+
+<script>
+  // Hamburger toggle
+  document.getElementById('hamburger')?.addEventListener('click', () => {
+    const menu = document.getElementById('mobile-menu');
+    menu?.classList.toggle('hidden');
+    const lines = document.querySelectorAll('.hamburger-line');
+    lines[0]?.classList.toggle('translate-y-2');
+    lines[0]?.classList.toggle('rotate-45');
+    lines[1]?.classList.toggle('opacity-0');
+    lines[2]?.classList.toggle('-translate-y-2');
+    lines[2]?.classList.toggle('-rotate-45');
+  });
+
+  // Mobile submenu toggle
+  document.querySelectorAll('.mobile-nav-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const submenu = btn.nextElementSibling;
+      submenu?.classList.toggle('hidden');
+      btn.querySelector('svg')?.classList.toggle('rotate-180');
+    });
+  });
+</script>

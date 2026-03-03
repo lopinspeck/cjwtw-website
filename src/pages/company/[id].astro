@@ -1,0 +1,42 @@
+---
+import SubPageLayout from '../../components/SubPageLayout.astro';
+import { comData } from '../../data/lang.js';
+import { decodeHtml } from '../../data/decode.js';
+import pagesData from '../../data/pages.json';
+
+export function getStaticPaths() {
+  return [
+    { params: { id: '1' } },
+    { params: { id: '2' } },
+    { params: { id: '3' } },
+    { params: { id: '4' } },
+    { params: { id: '5' } },
+    { params: { id: '6' } },
+    { params: { id: '7' } },
+  ];
+}
+
+const { id } = Astro.params;
+const menuItems = Object.entries(comData).map(([key, val]) => ({
+  id: key,
+  label: val.tw,
+  href: `/company/${key}`,
+}));
+
+const fileMap = {
+  '1': 'company-1.html', '2': 'company-2.html', '3': 'company-3.html',
+  '4': 'company-4.html', '5': 'company-5.html', '6': 'company-6.html', '7': 'company-7.html',
+};
+const pageContent = pagesData[fileMap[id]];
+const contentHtml = pageContent ? decodeHtml(pageContent.c_text_tw) : '';
+---
+
+<SubPageLayout
+  title={comData[id]?.tw}
+  titleEn="Corporate Governance"
+  titleTw="公司治理"
+  menuItems={menuItems}
+  activeId={id}
+>
+  <div set:html={contentHtml} />
+</SubPageLayout>

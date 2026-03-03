@@ -1,0 +1,56 @@
+---
+import SubPageLayout from '../components/SubPageLayout.astro';
+import { langData } from '../data/lang.js';
+
+const menuItems = [
+  { id: 'financial', label: langData[4].tw, href: '/financial' },
+  { id: 'investor', label: langData[5].tw, href: '/investor' },
+  { id: 'investor-info', label: langData[6].tw, href: '/investor-info' },
+];
+---
+
+<SubPageLayout
+  title="投資人資訊"
+  titleEn="Investor Zone"
+  titleTw="投資人專區"
+  menuItems={menuItems}
+  activeId="investor-info"
+  pageClass="financial_page"
+>
+  <h4 class="text-xl font-bold text-primary mb-4">投資人服務</h4>
+  <div class="space-y-1 mb-8">
+    <p>掛牌交易 中華民國證券櫃檯買賣中心</p>
+    <p>公司名稱 寶得利國際股份有限公司</p>
+    <p>股票代號 5301</p>
+    <p>產業 觀光產業</p>
+    <p>上櫃日期 1990/6/1</p>
+    <p>公司地址 台北市中山區新生北路二段28巷1號B1</p>
+    <p>電話 +886-2-8921-1333</p>
+    <p>傳真 +886-2-8921-0333</p>
+  </div>
+
+  <h4 class="text-xl font-bold text-primary mb-4">股票報價資訊</h4>
+  <p class="mb-8"><a href="http://mis.twse.com.tw/stock/index.jsp" target="_blank" class="text-gold hover:underline">http://mis.twse.com.tw/stock/index.jsp</a></p>
+
+  <h4 class="text-xl font-bold text-primary mb-4">股務代理</h4>
+  <div class="space-y-1 mb-8">
+    <p>元大證券股份有限公司</p>
+    <p>地址：台北市大安區敦化南路二段67號B1</p>
+    <p>電話：+886-2-25865859</p>
+    <p>網址：<a href="https://www.yuanta.com.tw" target="_blank" class="text-gold hover:underline">https://www.yuanta.com.tw</a></p>
+  </div>
+
+  <h4 class="text-xl font-bold text-primary mb-4">聯絡窗口</h4>
+  <div class="space-y-1">
+    <p class="font-bold">股務室</p>
+    <p>地址：台北市中山區新生北路二段28巷1號B1</p>
+    <p>電話：+886-2-8921-1333 分機588</p>
+    <p class="font-bold mt-4">投資人關係及利害關係人</p>
+    <p>地址：台北市中山區新生北路二段28巷1號B1</p>
+    <p>電話：+886-2-8921-1333 分機788 寧先生</p>
+    <p>mail：ning@cjwtaiwan.com</p>
+    <p class="font-bold mt-4">股東帳戶及過戶轉讓相關事宜</p>
+    <p>元大證券股份有限公司</p>
+    <p>地址：台北市大安區敦化南路二段67號B1</p>
+  </div>
+</SubPageLayout>

@@ -1,0 +1,25 @@
+---
+import SubPageLayout from '../components/SubPageLayout.astro';
+import { groupData } from '../data/lang.js';
+import { decodeHtml } from '../data/decode.js';
+import pagesData from '../data/pages.json';
+
+const menuItems = Object.entries(groupData).map(([key, val]) => ({
+  id: key,
+  label: val.tw,
+  href: `/group?id=${key}`,
+}));
+
+const pageContent = pagesData['group.html'];
+const contentHtml = pageContent ? decodeHtml(pageContent.g_text_tw) : '';
+---
+
+<SubPageLayout
+  title="關係企業"
+  titleEn="Affiliate Enterprise"
+  titleTw="關係企業"
+  menuItems={menuItems}
+  activeId="1"
+>
+  <div set:html={contentHtml} />
+</SubPageLayout>
