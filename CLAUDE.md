@@ -35,3 +35,22 @@ npm run preview  # 本地預覽生產版本
 - Tailwind CSS 3
 - TypeScript (strict mode)
 - 套件管理：npm
+- 部署：GitHub Pages (`npm run deploy`，輸出至 `prod` branch)
+
+## Data Layer
+
+- **src/data/lang.js** — 多語系文字（繁中/英文），以數字 key 對應，修改時注意中英文配對正確
+- **src/data/decode.js** — HTML entity 解碼工具，用於 `set:html` 渲染原始 HTML 內容
+
+## Key Patterns
+
+- 子頁面統一使用 `SubPageLayout` 元件（含 Banner + SideMenu）
+- 路由以數字命名（如 `about/2.astro`）對應後端資料 ID，勿隨意更改
+- `import.meta.env.BASE_URL` 用於所有內部連結，確保 GitHub Pages 子路徑正確
+- 語言切換透過 `localStorage('cjw_lang')` + `langchange` 自訂事件實作
+
+## Known Limitations
+
+- 部分頁面（hr、career）內容為佔位文字，待客戶提供正式內容
+- 聯絡表單（contact.astro）尚無後端送出功能
+- 語言切換僅部分頁面有實作監聽
