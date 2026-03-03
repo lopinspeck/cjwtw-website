@@ -1,3 +1,5 @@
+const base = import.meta.env.BASE_URL || '/';
+
 export function decodeHtml(str) {
   if (!str) return '';
   return str
@@ -9,5 +11,7 @@ export function decodeHtml(str) {
     .replace(/&nbsp;/g, ' ')
     .replace(/&rsquo;/g, "'")
     .replace(/&#39;/g, "'")
-    .replace(/\r\n/g, '\n');
+    .replace(/\r\n/g, '\n')
+    .replace(/src="\/upload\//g, `src="${base}upload/`)
+    .replace(/href="\/upload\//g, `href="${base}upload/`);
 }

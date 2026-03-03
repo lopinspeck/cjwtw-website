@@ -1,5 +1,6 @@
 ---
 import { langData, aboutData, comData } from '../data/lang.js';
+const base = import.meta.env.BASE_URL;
 ---
 
 <footer class="bg-primary text-white">
@@ -11,7 +12,7 @@ import { langData, aboutData, comData } from '../data/lang.js';
   <div class="max-w-7xl mx-auto px-4 py-12">
     <!-- Logo -->
     <a href="/" class="inline-block mb-8">
-      <img src="/images/logo_f.svg" alt="寶得利國際" class="h-10" />
+      <img src={`${base}images/logo_f.svg`} alt="寶得利國際" class="h-10" />
     </a>
 
     <!-- Sitemap -->

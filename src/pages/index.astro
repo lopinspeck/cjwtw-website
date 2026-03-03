@@ -1,16 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { newsData, langData } from '../data/lang.js';
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="寶得利國際 CJW International" pageClass="index_page">
   <!-- Banner / Hero -->
   <section id="banner" class="relative h-[70vh] min-h-[500px] bg-primary overflow-hidden">
     <div class="absolute inset-0 flex">
-      <div class="banner-slide w-full h-full flex-shrink-0 bg-cover bg-center" style="background-image: url('/images/2021_02_14_1140221.jpeg')"></div>
-      <div class="banner-slide w-full h-full flex-shrink-0 bg-cover bg-center" style="background-image: url('/images/2021_02_14_1140222.jpeg')"></div>
-      <div class="banner-slide w-full h-full flex-shrink-0 bg-cover bg-center" style="background-image: url('/images/2021_02_14_1140321.jpeg')"></div>
-      <div class="banner-slide w-full h-full flex-shrink-0 bg-cover bg-center" style="background-image: url('/images/2021_02_14_1140322.jpeg')"></div>
+      <div class="banner-slide w-full h-full flex-shrink-0 bg-cover bg-center" style={`background-image: url('${base}images/2021_02_14_1140221.jpeg')`}></div>
+      <div class="banner-slide w-full h-full flex-shrink-0 bg-cover bg-center" style={`background-image: url('${base}images/2021_02_14_1140222.jpeg')`}></div>
+      <div class="banner-slide w-full h-full flex-shrink-0 bg-cover bg-center" style={`background-image: url('${base}images/2021_02_14_1140321.jpeg')`}></div>
+      <div class="banner-slide w-full h-full flex-shrink-0 bg-cover bg-center" style={`background-image: url('${base}images/2021_02_14_1140322.jpeg')`}></div>
     </div>
     <div class="absolute inset-0 bg-primary/40"></div>
     <div class="absolute inset-0 flex items-center justify-center">
@@ -39,7 +40,7 @@ import { newsData, langData } from '../data/lang.js';
         {Object.entries(newsData).map(([id, item]) => (
           <a href={`/news/${id}`} class="group block bg-gray-50 rounded-lg overflow-hidden hover:shadow-xl transition-shadow">
             <div class="h-48 bg-primary/10 flex items-center justify-center">
-              <img src="/images/news_image.jpg" alt={item.tw} class="w-full h-full object-cover" />
+              <img src={`${base}images/news_image.jpg`} alt={item.tw} class="w-full h-full object-cover" />
             </div>
             <div class="p-6">
               <h3 class="text-primary font-bold group-hover:text-gold transition-colors line-clamp-2">{item.tw}</h3>
