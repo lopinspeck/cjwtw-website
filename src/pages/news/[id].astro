@@ -5,11 +5,7 @@ import { decodeHtml } from '../../data/decode.js';
 import pagesData from '../../data/pages.json';
 
 export function getStaticPaths() {
-  return [
-    { params: { id: '1' } },
-    { params: { id: '3' } },
-    { params: { id: '5' } },
-  ];
+  return Object.keys(newsData).map((key) => ({ params: { id: key } }));
 }
 
 const base = import.meta.env.BASE_URL;
@@ -20,8 +16,8 @@ const menuItems = Object.entries(newsData).map(([key, val]) => ({
   href: `${base}news/${key}`,
 }));
 
-const fileMap = { '1': 'news-1.html', '3': 'news-3.html', '5': 'news-5.html' };
-const pageContent = pagesData[fileMap[id]];
+// 資料來源為本地靜態 pages.json，內容已受信任
+const pageContent = pagesData[`news-${id}.html`];
 const contentHtml = pageContent ? decodeHtml(pageContent.n_text_tw) : '';
 ---
 
