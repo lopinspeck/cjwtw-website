@@ -14,13 +14,100 @@ const menuItems = [
 ---
 
 <SubPageLayout title="董事會" titleEn="Corporate Governance" titleTw="公司治理" menuItems={menuItems} activeId="3">
-  <h2 style="text-align:start">
-    <br />
-    <span style="color:#333333"
-      ><span style="font-family:sans-serif,Arial,Verdana," Trebuchet MS""
-        ><span style="font-family:微軟正黑體">第二十七屆董事名單</span></span
-      ></span>
-  </h2>
+  <h2 class="text-xl font-bold text-primary mb-6">第二十七屆董事名單</h2>
 
-  <p><img alt="" src="/cjwtw-website/images/upload/2025_11_30_102733.jpg" style="height:802px; width:1600px" /></p>
+  <div class="overflow-x-auto">
+    <table class="w-full border-collapse border border-gray-300 text-sm leading-relaxed">
+      <thead>
+        <tr class="bg-gray-100">
+          <th class="border border-gray-300 px-4 py-3 text-center whitespace-nowrap">職稱</th>
+          <th class="border border-gray-300 px-4 py-3 text-center">姓名</th>
+          <th class="border border-gray-300 px-4 py-3 text-center whitespace-nowrap">選任<br />日期</th>
+          <th class="border border-gray-300 px-4 py-3 text-center">主要經（學）歷</th>
+          <th class="border border-gray-300 px-4 py-3 text-center">目前兼任本公司及<br />其他公司之職務</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-gray-300 px-4 py-3 text-center whitespace-nowrap align-top">董事長兼任<br />總經理</td>
+          <td class="border border-gray-300 px-4 py-3 text-center align-top">黃武琦</td>
+          <td class="border border-gray-300 px-4 py-3 text-center align-top">114.06.18</td>
+          <td class="border border-gray-300 px-4 py-3 align-top">
+            台灣大學管理學院EMBA碩士<br />
+            上海復旦大學高級管理人員工商管理EMBA碩士<br />
+            騰加數位服務股份有限公司總經理<br />
+            創易加國際股份有限公司董事長<br />
+            黑潮數位金融股份有限公司董事長
+          </td>
+          <td class="border border-gray-300 px-4 py-3 align-top">
+            黑潮數位金融股份有限公司董事長<br />
+            創易加國際股份有限公司董事長<br />
+            騰加數位服務股份有限公司 董事
+          </td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 px-4 py-3 text-center align-top">董事</td>
+          <td class="border border-gray-300 px-4 py-3 text-center align-top">寶福欣通運股份有限公司<br />法人代表人：陳宇寒</td>
+          <td class="border border-gray-300 px-4 py-3 text-center align-top">114.06.18</td>
+          <td class="border border-gray-300 px-4 py-3 align-top"></td>
+          <td class="border border-gray-300 px-4 py-3 align-top"></td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 px-4 py-3 text-center align-top">董事</td>
+          <td class="border border-gray-300 px-4 py-3 text-center align-top">國原營造股份有限公司<br />法人代表人：王昌麒</td>
+          <td class="border border-gray-300 px-4 py-3 text-center align-top">113.06.28</td>
+          <td class="border border-gray-300 px-4 py-3 align-top">
+            國立政治大學 公共行政系<br />
+            立法院立法委員辦公室副主任<br />
+            興富發建設（股）公司董事長特助
+          </td>
+          <td class="border border-gray-300 px-4 py-3 align-top">
+            亞昕國際開發（股）公司<br />
+            董事長特助
+          </td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 px-4 py-3 text-center align-top">獨立董事</td>
+          <td class="border border-gray-300 px-4 py-3 text-center align-top">高明哲</td>
+          <td class="border border-gray-300 px-4 py-3 text-center align-top">113.06.28</td>
+          <td class="border border-gray-300 px-4 py-3 align-top">
+            國立臺灣大學法律學士<br />
+            台灣高等法院法官<br />
+            私立真理大學財經法學系講師<br />
+            十方律師事務所創辦律師
+          </td>
+          <td class="border border-gray-300 px-4 py-3 align-top">
+            十方律師事務所<br />
+            創辦律師
+          </td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 px-4 py-3 text-center align-top">獨立董事</td>
+          <td class="border border-gray-300 px-4 py-3 text-center align-top">潘鴻謀</td>
+          <td class="border border-gray-300 px-4 py-3 text-center align-top">113.06.28</td>
+          <td class="border border-gray-300 px-4 py-3 align-top">
+            逢甲大學機械工程系<br />
+            調查局副局長
+          </td>
+          <td class="border border-gray-300 px-4 py-3 align-top">
+            磐采股份有限公司<br />
+            獨立董事
+          </td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 px-4 py-3 text-center align-top">獨立董事</td>
+          <td class="border border-gray-300 px-4 py-3 text-center align-top">蕭仰歸</td>
+          <td class="border border-gray-300 px-4 py-3 text-center align-top">113.06.28</td>
+          <td class="border border-gray-300 px-4 py-3 align-top">
+            台灣海洋大學海洋法律研究所<br />
+            十方律師事務所合夥律師事務所合夥律師
+          </td>
+          <td class="border border-gray-300 px-4 py-3 align-top">
+            十方律師事務所<br />
+            合夥律師
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </SubPageLayout>

@@ -1,33 +1,14 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Banner from '../../components/Banner.astro';
-import { newsData } from '../../data/lang.js';
+import SubPageLayout from '../../components/SubPageLayout.astro';
+
 const base = import.meta.env.BASE_URL;
+const menuItems = [
+  { id: '5', label: '寶得利子公司-完美比例與中國國際航空簽署貨運承攬業務', href: `${base}news/5` },
+  { id: '1', label: '寶得利首間馬來西亞據點揭牌報導', href: `${base}news/1` },
+  { id: '3', label: '金門高梁酒 限量優惠活動', href: `${base}news/3` },
+];
 ---
 
-<Layout title="新消息" pageClass="about_page">
-  <Banner titleEn="NEWS" titleTw="新消息" />
-  <main class="max-w-7xl mx-auto px-4 py-10 lg:py-16">
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {
-        Object.entries(newsData).map(([id, item]) => (
-          <a
-            href={`${base}news/${id}`}
-            class="group block bg-white rounded-lg shadow hover:shadow-xl transition-shadow overflow-hidden"
-          >
-            <div class="h-48 bg-primary/5 overflow-hidden">
-              <img
-                src={`${base}images/news_image.jpg`}
-                alt={item.tw}
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            <div class="p-6">
-              <h3 class="text-primary font-bold group-hover:text-gold transition-colors">{item.tw}</h3>
-            </div>
-          </a>
-        ))
-      }
-    </div>
-  </main>
-</Layout>
+<SubPageLayout title="新消息" titleEn="NEWS" titleTw="新消息" menuItems={menuItems} activeId="">
+  <p>請從左側選單選擇新聞查看。</p>
+</SubPageLayout>
