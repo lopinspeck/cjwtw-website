@@ -2,64 +2,65 @@
 import SubPageLayout from '../components/SubPageLayout.astro';
 import { langData } from '../data/lang.js';
 
+const base = import.meta.env.BASE_URL;
 const menuItems = [
-  { id: 'financial', label: langData[4].tw, href: '/financial' },
-  { id: 'investor', label: langData[5].tw, href: '/investor' },
-  { id: 'investor-info', label: langData[6].tw, href: '/investor-info' },
+  { id: 'financial', label: langData[4].tw, href: `${base}financial` },
+  { id: 'investor', label: langData[5].tw, href: `${base}investor` },
+  { id: 'investor-info', label: langData[6].tw, href: `${base}investor-info` },
 ];
 
 const reports = [
   {
     title: '114年度及期中報告',
     files: [
-      { name: '114年2025Q3_5301合併報表', href: '/upload/2025_11_30_1114530.pdf' },
-      { name: '114年2025Q2_5301合併報表', href: '/upload/2025_11_30_1112050.pdf' },
-      { name: '114年2025Q1_5301合併報表', href: '/upload/2025_11_30_1111380.pdf' },
+      { name: '114年2025Q3_5301合併報表', href: `${base}upload/2025_11_30_1114530.pdf` },
+      { name: '114年2025Q2_5301合併報表', href: `${base}upload/2025_11_30_1112050.pdf` },
+      { name: '114年2025Q1_5301合併報表', href: `${base}upload/2025_11_30_1111380.pdf` },
     ],
   },
   {
     title: '113年度及期中報告',
     files: [
-      { name: '113年2024Q4_5301合併報表', href: '/upload/2025_11_30_1123150.pdf' },
-      { name: '113年2024Q3_5301合併報表', href: '/upload/2025_11_30_1123320.pdf' },
-      { name: '113年2024Q2_5301合併報表', href: '/upload/2024_11_22_1139480.pdf' },
-      { name: '113年2023Q1_5301合併報表', href: '/upload/2024_11_22_1139280.pdf' },
+      { name: '113年2024Q4_5301合併報表', href: `${base}upload/2025_11_30_1123150.pdf` },
+      { name: '113年2024Q3_5301合併報表', href: `${base}upload/2025_11_30_1123320.pdf` },
+      { name: '113年2024Q2_5301合併報表', href: `${base}upload/2024_11_22_1139480.pdf` },
+      { name: '113年2023Q1_5301合併報表', href: `${base}upload/2024_11_22_1139280.pdf` },
     ],
   },
   {
     title: '112年度及期中報告',
     files: [
-      { name: '112年2023Q4_5301合併報表', href: '/upload/2024_11_22_1142300.pdf' },
-      { name: '112年2023Q3_5301合併報表', href: '/upload/2024_11_22_1142520.pdf' },
-      { name: '112年2023Q2_5301合併報表', href: '/upload/2024_11_22_1143110.pdf' },
-      { name: '112年2023Q1_5301合併報表', href: '/upload/2024_11_22_1143300.pdf' },
+      { name: '112年2023Q4_5301合併報表', href: `${base}upload/2024_11_22_1142300.pdf` },
+      { name: '112年2023Q3_5301合併報表', href: `${base}upload/2024_11_22_1142520.pdf` },
+      { name: '112年2023Q2_5301合併報表', href: `${base}upload/2024_11_22_1143110.pdf` },
+      { name: '112年2023Q1_5301合併報表', href: `${base}upload/2024_11_22_1143300.pdf` },
     ],
   },
   {
     title: '111年度及期中報告',
     files: [
-      { name: '111年2022Q4_5301合併報表', href: '/upload/2024_11_22_1529060.pdf' },
-      { name: '111年2022Q3_5301合併報表', href: '/upload/2024_11_22_1529320.pdf' },
-      { name: '111年2022Q2_5301合併報表', href: '/upload/2024_11_22_1530020.pdf' },
-      { name: '111年2022Q1_5301合併報表', href: '/upload/2024_11_22_1530360.pdf' },
+      { name: '111年2022Q4_5301合併報表', href: `${base}upload/2024_11_22_1529060.pdf` },
+      { name: '111年2022Q3_5301合併報表', href: `${base}upload/2024_11_22_1529320.pdf` },
+      { name: '111年2022Q2_5301合併報表', href: `${base}upload/2024_11_22_1530020.pdf` },
+      { name: '111年2022Q1_5301合併報表', href: `${base}upload/2024_11_22_1530360.pdf` },
     ],
   },
   {
     title: '110年度及期中報告',
     files: [
-      { name: '110年2021Q4_5301合併報表', href: '/upload/2022_05_10_1243360.pdf' },
-      { name: '110年2021Q3_5301合併報表', href: '/upload/2022_05_10_1245260.pdf' },
-      { name: '110年2021Q2_5301合併報表', href: '/upload/2022_05_10_1247190.pdf' },
-      { name: '110年2021Q1_5301合併報表', href: '/upload/2022_05_04_0935070.pdf' },
+      { name: '110年2021Q4_5301合併報表', href: `${base}upload/2022_05_10_1243360.pdf` },
+      { name: '110年2021Q3_5301合併報表', href: `${base}upload/2022_05_10_1245260.pdf` },
+      { name: '110年2021Q2_5301合併報表', href: `${base}upload/2022_05_10_1247190.pdf` },
+      { name: '110年2021Q1_5301合併報表', href: `${base}upload/2022_05_04_0935070.pdf` },
     ],
   },
   {
     title: '109年度及期中報告',
     files: [
-      { name: '109年2020Q4_5301合併報表', href: '/upload/2022_05_10_1359170.pdf' },
-      { name: '109年2020Q3_5301合併報表', href: '/upload/2022_05_10_1405060.pdf' },
-      { name: '109年2020Q2_5301合併報表', href: '/upload/2022_05_10_1359400.pdf' },
-      { name: '109年2020Q1_5301合併報表', href: '/upload/2022_05_10_1404280.pdf' },
+      { name: '109年2020Q4_5301合併報表', href: `${base}upload/2022_05_10_1359170.pdf` },
+      { name: '109年2020Q3_5301合併報表', href: `${base}upload/2022_05_10_1405060.pdf` },
+      { name: '109年2020Q2_5301合併報表', href: `${base}upload/2022_05_10_1359400.pdf` },
+      { name: '109年2020Q1_5301合併報表', href: `${base}upload/2022_05_10_1404280.pdf` },
     ],
   },
 ];

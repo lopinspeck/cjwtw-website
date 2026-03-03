@@ -38,7 +38,7 @@ const base = import.meta.env.BASE_URL;
       </div>
       <div class="grid md:grid-cols-3 gap-8">
         {Object.entries(newsData).map(([id, item]) => (
-          <a href={`/news/${id}`} class="group block bg-gray-50 rounded-lg overflow-hidden hover:shadow-xl transition-shadow">
+          <a href={`${base}news/${id}`} class="group block bg-gray-50 rounded-lg overflow-hidden hover:shadow-xl transition-shadow">
             <div class="h-48 bg-primary/10 flex items-center justify-center">
               <img src={`${base}images/news_image.jpg`} alt={item.tw} class="w-full h-full object-cover" />
             </div>
@@ -59,19 +59,19 @@ const base = import.meta.env.BASE_URL;
         <p class="text-primary/60 mt-2 tracking-widest">{langData[3].tw}</p>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
-        <a href="/financial" class="block bg-white p-8 rounded-lg shadow hover:shadow-xl transition-shadow text-center group">
+        <a href={`${base}financial`} class="block bg-white p-8 rounded-lg shadow hover:shadow-xl transition-shadow text-center group">
           <div class="w-16 h-16 bg-primary/5 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gold/10 transition-colors">
             <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
           </div>
           <h3 class="text-primary font-bold text-lg group-hover:text-gold transition-colors">{langData[4].tw}</h3>
         </a>
-        <a href="/investor" class="block bg-white p-8 rounded-lg shadow hover:shadow-xl transition-shadow text-center group">
+        <a href={`${base}investor`} class="block bg-white p-8 rounded-lg shadow hover:shadow-xl transition-shadow text-center group">
           <div class="w-16 h-16 bg-primary/5 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gold/10 transition-colors">
             <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
           </div>
           <h3 class="text-primary font-bold text-lg group-hover:text-gold transition-colors">{langData[5].tw}</h3>
         </a>
-        <a href="/investor-info" class="block bg-white p-8 rounded-lg shadow hover:shadow-xl transition-shadow text-center group">
+        <a href={`${base}investor-info`} class="block bg-white p-8 rounded-lg shadow hover:shadow-xl transition-shadow text-center group">
           <div class="w-16 h-16 bg-primary/5 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gold/10 transition-colors">
             <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
           </div>
@@ -87,7 +87,7 @@ const base = import.meta.env.BASE_URL;
       <h2 class="font-serif text-gold text-3xl lg:text-4xl tracking-wider mb-4">Recruit</h2>
       <p class="text-white/60 tracking-widest mb-8">{langData[12].tw}</p>
       <p class="text-white/80 max-w-2xl mx-auto mb-8 leading-relaxed">加入寶得利國際，與我們一起打造台灣精品觀光的未來。</p>
-      <a href="/career" class="inline-block border-2 border-gold text-gold px-8 py-3 rounded hover:bg-gold hover:text-primary transition-colors font-bold tracking-wider">
+      <a href={`${base}career`} class="inline-block border-2 border-gold text-gold px-8 py-3 rounded hover:bg-gold hover:text-primary transition-colors font-bold tracking-wider">
         {langData[12].tw}
       </a>
     </div>

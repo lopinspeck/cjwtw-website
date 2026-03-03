@@ -13,11 +13,12 @@ export function getStaticPaths() {
   ];
 }
 
+const base = import.meta.env.BASE_URL;
 const { id } = Astro.params;
 const menuItems = Object.entries(aboutData).map(([key, val]) => ({
   id: key,
   label: val.tw,
-  href: `/about/${key}`,
+  href: `${base}about/${key}`,
 }));
 
 // Get page content

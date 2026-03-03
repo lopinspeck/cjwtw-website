@@ -11,7 +11,7 @@ const base = import.meta.env.BASE_URL;
 
   <div class="max-w-7xl mx-auto px-4 py-12">
     <!-- Logo -->
-    <a href="/" class="inline-block mb-8">
+    <a href={base} class="inline-block mb-8">
       <img src={`${base}images/logo_f.svg`} alt="寶得利國際" class="h-10" />
     </a>
 
@@ -21,10 +21,10 @@ const base = import.meta.env.BASE_URL;
       <div>
         <h3 class="text-gold font-bold mb-3">{langData[2].tw}</h3>
         <div class="space-y-2">
-          <a href="/about/2" class="block text-white/60 hover:text-gold transition-colors">{aboutData[2].tw}</a>
-          <a href="/about/7" class="block text-white/60 hover:text-gold transition-colors">{aboutData[7].tw}</a>
-          <a href="/about/4" class="block text-white/60 hover:text-gold transition-colors">{aboutData[4].tw}</a>
-          <a href="/about/5" class="block text-white/60 hover:text-gold transition-colors">{aboutData[5].tw}</a>
+          <a href={`${base}about/2`} class="block text-white/60 hover:text-gold transition-colors">{aboutData[2].tw}</a>
+          <a href={`${base}about/7`} class="block text-white/60 hover:text-gold transition-colors">{aboutData[7].tw}</a>
+          <a href={`${base}about/4`} class="block text-white/60 hover:text-gold transition-colors">{aboutData[4].tw}</a>
+          <a href={`${base}about/5`} class="block text-white/60 hover:text-gold transition-colors">{aboutData[5].tw}</a>
         </div>
       </div>
 
@@ -32,9 +32,9 @@ const base = import.meta.env.BASE_URL;
       <div>
         <h3 class="text-gold font-bold mb-3">{langData[3].tw}</h3>
         <div class="space-y-2">
-          <a href="/financial" class="block text-white/60 hover:text-gold transition-colors">{langData[4].tw}</a>
-          <a href="/investor" class="block text-white/60 hover:text-gold transition-colors">{langData[5].tw}</a>
-          <a href="/investor-info" class="block text-white/60 hover:text-gold transition-colors">{langData[6].tw}</a>
+          <a href={`${base}financial`} class="block text-white/60 hover:text-gold transition-colors">{langData[4].tw}</a>
+          <a href={`${base}investor`} class="block text-white/60 hover:text-gold transition-colors">{langData[5].tw}</a>
+          <a href={`${base}investor-info`} class="block text-white/60 hover:text-gold transition-colors">{langData[6].tw}</a>
         </div>
       </div>
 
@@ -43,39 +43,39 @@ const base = import.meta.env.BASE_URL;
         <h3 class="text-gold font-bold mb-3">{langData[7].tw}</h3>
         <div class="space-y-2">
           {Object.entries(comData).map(([id, val]) => (
-            <a href={`/company/${id}`} class="block text-white/60 hover:text-gold transition-colors">{val.tw}</a>
+            <a href={`${base}company/${id}`} class="block text-white/60 hover:text-gold transition-colors">{val.tw}</a>
           ))}
         </div>
       </div>
 
       <!-- 新消息 -->
       <div>
-        <h3 class="text-gold font-bold mb-3"><a href="/news" class="hover:text-gold">{langData[8].tw}</a></h3>
+        <h3 class="text-gold font-bold mb-3"><a href={`${base}news`} class="hover:text-gold">{langData[8].tw}</a></h3>
       </div>
 
       <!-- 關係企業 -->
       <div>
-        <h3 class="text-gold font-bold mb-3"><a href="/group" class="hover:text-gold">{langData[9].tw}</a></h3>
+        <h3 class="text-gold font-bold mb-3"><a href={`${base}group`} class="hover:text-gold">{langData[9].tw}</a></h3>
       </div>
 
       <!-- 企業社會責任 -->
       <div>
         <h3 class="text-gold font-bold mb-3">{langData[10].tw}</h3>
         <div class="space-y-2">
-          <a href="/hr" class="block text-white/60 hover:text-gold transition-colors">{langData[11].tw}</a>
-          <a href="/career" class="block text-white/60 hover:text-gold transition-colors">{langData[12].tw}</a>
-          <a href="/csr-report" class="block text-white/60 hover:text-gold transition-colors">{langData[13].tw}</a>
+          <a href={`${base}hr`} class="block text-white/60 hover:text-gold transition-colors">{langData[11].tw}</a>
+          <a href={`${base}career`} class="block text-white/60 hover:text-gold transition-colors">{langData[12].tw}</a>
+          <a href={`${base}csr-report`} class="block text-white/60 hover:text-gold transition-colors">{langData[13].tw}</a>
         </div>
       </div>
 
       <!-- 影音專區 -->
       <div>
-        <h3 class="text-gold font-bold mb-3"><a href="/video" class="hover:text-gold">{langData[14].tw}</a></h3>
+        <h3 class="text-gold font-bold mb-3"><a href={`${base}video`} class="hover:text-gold">{langData[14].tw}</a></h3>
       </div>
 
       <!-- 聯絡我們 -->
       <div>
-        <h3 class="text-gold font-bold mb-3"><a href="/contact" class="hover:text-gold">{langData[15].tw}</a></h3>
+        <h3 class="text-gold font-bold mb-3"><a href={`${base}contact`} class="hover:text-gold">{langData[15].tw}</a></h3>
       </div>
     </div>
 

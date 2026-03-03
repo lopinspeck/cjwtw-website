@@ -12,11 +12,12 @@ export function getStaticPaths() {
   ];
 }
 
+const base = import.meta.env.BASE_URL;
 const { id } = Astro.params;
 const menuItems = Object.entries(newsData).map(([key, val]) => ({
   id: key,
   label: val.tw,
-  href: `/news/${key}`,
+  href: `${base}news/${key}`,
 }));
 
 const fileMap = { '1': 'news-1.html', '3': 'news-3.html', '5': 'news-5.html' };

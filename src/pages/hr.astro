@@ -4,10 +4,11 @@ import { langData } from '../data/lang.js';
 import { decodeHtml } from '../data/decode.js';
 import pagesData from '../data/pages.json';
 
+const base = import.meta.env.BASE_URL;
 const menuItems = [
-  { id: 'hr', label: langData[11].tw, href: '/hr' },
-  { id: 'career', label: langData[12].tw, href: '/career' },
-  { id: 'csr-report', label: langData[13].tw, href: '/csr-report' },
+  { id: 'hr', label: langData[11].tw, href: `${base}hr` },
+  { id: 'career', label: langData[12].tw, href: `${base}career` },
+  { id: 'csr-report', label: langData[13].tw, href: `${base}csr-report` },
 ];
 
 const pageContent = pagesData['hr.html'];

@@ -10,7 +10,7 @@ const base = import.meta.env.BASE_URL;
   <main class="max-w-7xl mx-auto px-4 py-10 lg:py-16">
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {Object.entries(newsData).map(([id, item]) => (
-        <a href={`/news/${id}`} class="group block bg-white rounded-lg shadow hover:shadow-xl transition-shadow overflow-hidden">
+        <a href={`${base}news/${id}`} class="group block bg-white rounded-lg shadow hover:shadow-xl transition-shadow overflow-hidden">
           <div class="h-48 bg-primary/5 overflow-hidden">
             <img src={`${base}images/news_image.jpg`} alt={item.tw} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
