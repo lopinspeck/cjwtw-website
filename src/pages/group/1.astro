@@ -1,0 +1,25 @@
+---
+import SubPageLayout from '../../components/SubPageLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+const menuItems = [
+  { id: '1', label: '馬來西亞-珠寶店', href: `${base}group/1` },
+  { id: '4', label: '馬來西亞-土產推廣中心', href: `${base}group/4` },
+];
+---
+
+<SubPageLayout
+  title="馬來西亞-珠寶店"
+  titleEn="Affiliate Enterprise"
+  titleTw="關係企業"
+  menuItems={menuItems}
+  activeId="1"
+>
+  <h2>
+    <img alt="" src={`${base}upload/images/2022_05_25_231700(4).jpg`} style="height:1080px; width:1440px" /><img
+      alt=""
+      src={`${base}upload/images/2022_05_25_231702.jpg`}
+      style="height:1080px; width:1440px"
+    />
+  </h2>
+</SubPageLayout>
