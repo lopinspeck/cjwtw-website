@@ -15,11 +15,34 @@ const menuItems = [
   menuItems={menuItems}
   activeId="1"
 >
-  <h2>
-    <img alt="" src={`${base}upload/images/2022_05_25_231700(4).jpg`} class="w-full" /><img
-      alt=""
-      src={`${base}upload/images/2022_05_25_231702.jpg`}
-      class="w-full"
+  <h2 class="text-xl font-bold text-primary mb-4 border-b border-gold/30 pb-2">Dejewel 國際珠寶時尚精品中心</h2>
+
+  <p class="text-base leading-relaxed text-gray-700 mb-6">
+    寶得利國際於 2018 年正式進軍馬來西亞，在首都吉隆坡設立「Dejewel 國際珠寶時尚精品中心」，為海外布局的首個據點。商場以時尚、舒適的購物空間為設計核心，匯集國際珠寶、台灣精品玉石及各式高端飾品，致力為來自世界各地的觀光旅客提供專業且安心的購物體驗。
+  </p>
+
+  <div class="grid gap-4 md:grid-cols-2">
+    <img
+      alt="Dejewel 珠寶店外觀"
+      src={`${base}upload/images/2022_05_25_231700(4).jpg`}
+      class="w-full rounded-lg"
     />
-  </h2>
+    <img
+      alt="Dejewel 珠寶店內部"
+      src={`${base}upload/images/2022_05_25_231702.jpg`}
+      class="w-full rounded-lg"
+    />
+  </div>
+
+  <div class="mt-8 rounded-lg border border-gray-200 p-5">
+    <h3 class="font-bold text-primary mb-3">店家資訊</h3>
+    <dl class="grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 text-sm text-gray-700">
+      <dt class="font-semibold text-gray-500">地點</dt>
+      <dd>馬來西亞 吉隆坡</dd>
+      <dt class="font-semibold text-gray-500">營業項目</dt>
+      <dd>國際珠寶、台灣玉石、精品飾品</dd>
+      <dt class="font-semibold text-gray-500">開幕時間</dt>
+      <dd>2018 年 1 月</dd>
+    </dl>
+  </div>
 </SubPageLayout>

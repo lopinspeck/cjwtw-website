@@ -9,7 +9,39 @@ const menuItems = [
 ---
 
 <SubPageLayout title="馬來西亞-土產推廣中心" titleEn="Affiliate Enterprise" titleTw="關係企業" menuItems={menuItems} activeId="4">
-  <p><img alt="" src={`${base}upload/images/2022_05_26_052433.jpg`} class="w-full" /></p>
-  <p><img alt="" src={`${base}upload/images/2022_05_26_052452.jpg`} class="w-full" /></p>
-  <p><img alt="" src={`${base}upload/images/2022_05_26_052723.jpg`} class="w-full" /></p>
+  <h2 class="text-xl font-bold text-primary mb-4 border-b border-gold/30 pb-2">馬國精品文化土特產中心</h2>
+
+  <p class="text-base leading-relaxed text-gray-700 mb-6">
+    馬國精品文化土特產中心位於馬來西亞吉隆坡，是寶得利國際海外據點之一。中心精選馬來西亞當地特色產品，包含白咖啡、肉骨茶、燕窩、錫製品等優質土產，以及各類在地文化伴手禮，為觀光旅客提供一站式的購物體驗，將馬來西亞的美好帶回家。
+  </p>
+
+  <div class="space-y-4">
+    <img
+      alt="土產推廣中心外觀"
+      src={`${base}upload/images/2022_05_26_052433.jpg`}
+      class="w-full rounded-lg"
+    />
+    <img
+      alt="土產推廣中心商品展示"
+      src={`${base}upload/images/2022_05_26_052452.jpg`}
+      class="w-full rounded-lg"
+    />
+    <img
+      alt="土產推廣中心內部空間"
+      src={`${base}upload/images/2022_05_26_052723.jpg`}
+      class="w-full rounded-lg"
+    />
+  </div>
+
+  <div class="mt-8 rounded-lg border border-gray-200 p-5">
+    <h3 class="font-bold text-primary mb-3">店家資訊</h3>
+    <dl class="grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 text-sm text-gray-700">
+      <dt class="font-semibold text-gray-500">地點</dt>
+      <dd>馬來西亞 吉隆坡</dd>
+      <dt class="font-semibold text-gray-500">營業項目</dt>
+      <dd>馬來西亞土產、文化伴手禮、在地特色商品</dd>
+      <dt class="font-semibold text-gray-500">開幕時間</dt>
+      <dd>2018 年 1 月</dd>
+    </dl>
+  </div>
 </SubPageLayout>
