@@ -5,10 +5,10 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="寶得利國際 CJW International" pageClass="index_page">
-  <!-- Banner Slider -->
-  <section id="banner" class="relative w-full h-[calc(100vh-4rem)] lg:h-[calc(100vh-5rem)] overflow-hidden">
+  <!-- Hero Banner Slider -->
+  <section id="banner" class="relative w-full h-[70vh] lg:h-[calc(100vh-5rem)] overflow-hidden">
     <div id="slider" class="flex h-full transition-transform duration-700 ease-in-out">
-      <div class="slide w-full h-full flex-shrink-0">
+      <div class="slide w-full h-full flex-shrink-0 relative">
         <img
           src={`${base}images/2021_02_14_1140321.jpeg`}
           alt="Banner 1"
@@ -20,7 +20,7 @@ const base = import.meta.env.BASE_URL;
           class="w-full h-full object-cover md:hidden"
         />
       </div>
-      <div class="slide w-full h-full flex-shrink-0">
+      <div class="slide w-full h-full flex-shrink-0 relative">
         <img
           src={`${base}images/2021_02_14_1140221.jpeg`}
           alt="Banner 2"
@@ -33,12 +33,35 @@ const base = import.meta.env.BASE_URL;
         />
       </div>
     </div>
-    <!-- Slider indicators -->
-    <div class="absolute bottom-6 left-8 flex items-center gap-2 text-sm font-serif">
-      <button class="slider-dot text-gold" data-index="0">01</button>
-      <span class="text-white/40">○</span>
-      <span class="text-gold">●</span>
-      <button class="slider-dot text-white/60" data-index="1">02</button>
+
+    <!-- Hero overlay text -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
+    <div class="absolute bottom-16 left-8 lg:left-16 text-white">
+      <h1 class="font-serif text-3xl lg:text-5xl tracking-[0.15em] drop-shadow-lg">CJW International</h1>
+      <p class="text-gold text-sm lg:text-base tracking-[0.3em] mt-2 drop-shadow">寶得利國際股份有限公司</p>
+    </div>
+
+    <!-- Slider dots -->
+    <div class="absolute bottom-6 right-8 flex items-center gap-3">
+      <button class="slider-dot w-3 h-3 rounded-full bg-gold transition-all" data-index="0" aria-label="Slide 1"></button>
+      <button class="slider-dot w-3 h-3 rounded-full bg-white/40 transition-all" data-index="1" aria-label="Slide 2"></button>
+    </div>
+  </section>
+
+  <!-- Company Intro -->
+  <section class="bg-white py-16 lg:py-20">
+    <div class="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+      <h2 class="font-serif text-gold text-2xl lg:text-3xl tracking-[0.2em] mb-2">About CJW</h2>
+      <p class="text-primary/50 text-sm tracking-widest mb-8">關於寶得利</p>
+      <p class="text-base lg:text-lg leading-relaxed text-gray-600 max-w-3xl mx-auto">
+        始終秉持「品質把關　行銷台灣」經營理念，寶得利國際於台灣觀光精品中享譽盛名。耗費巨資打造出時尚、舒適的精品購物中心，提供最專業的服務品質，讓所有造訪的貴賓擁有舒適又安心的購物環境。
+      </p>
+      <a
+        href={`${base}about/2`}
+        class="inline-block mt-8 px-8 py-3 border border-gold text-gold text-sm tracking-widest hover:bg-gold hover:text-white transition-colors"
+      >
+        了解更多
+      </a>
     </div>
   </section>
 
@@ -46,26 +69,26 @@ const base = import.meta.env.BASE_URL;
   <main class="flex flex-col lg:flex-row">
     <!-- Left Column: Image -->
     <section
-      class="hidden lg:block lg:w-1/3 bg-cover bg-center"
+      class="hidden lg:block lg:w-1/3 min-h-[500px] bg-cover bg-center"
       style={`background-image: url('${base}images/left_image.jpg')`}
     >
     </section>
 
-    <!-- Middle Column: NEWS + News Image -->
+    <!-- Middle Column: NEWS -->
     <section class="lg:w-1/3 flex flex-col">
       <div class="flex-1 px-8 lg:px-10 py-12 lg:py-16">
         <h2 class="font-serif text-primary text-2xl lg:text-3xl tracking-[0.2em] mb-1">NEWS</h2>
         <p class="text-primary/50 text-sm tracking-widest mb-8">{langData[8].tw}</p>
-        <ul class="space-y-6">
+        <ul class="space-y-0 divide-y divide-gray-100">
           {
             Object.entries(newsData).map(([id, item]) => (
               <li>
                 <a
                   href={`${base}news/${id}`}
-                  class="flex items-center justify-between group text-primary hover:text-gold transition-colors"
+                  class="flex items-center justify-between py-5 group text-primary hover:text-gold transition-colors"
                 >
                   <span class="pr-4 leading-relaxed">{item.tw}</span>
-                  <span class="flex-shrink-0 w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center group-hover:border-gold transition-colors">
+                  <span class="flex-shrink-0 w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center group-hover:border-gold group-hover:bg-gold/10 transition-all">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                     </svg>
@@ -88,50 +111,35 @@ const base = import.meta.env.BASE_URL;
       <div class="flex-1 px-8 lg:px-10 py-12 lg:py-16 bg-[#f2f2f3]">
         <h2 class="font-serif text-primary text-2xl lg:text-3xl tracking-[0.2em] mb-1">Investor Zone</h2>
         <p class="text-primary/50 text-sm tracking-widest mb-8">{langData[3].tw}</p>
-        <div class="space-y-6">
+        <div class="space-y-5">
           <a href={`${base}financial`} class="flex items-center gap-5 group">
-            <span class="w-16 h-16 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                ><path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                  d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                ></path></svg
-              >
+            <span class="w-14 h-14 rounded-full bg-primary flex items-center justify-center flex-shrink-0 group-hover:bg-gold transition-colors">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
             </span>
             <span class="text-primary group-hover:text-gold transition-colors">{langData[4].tw}</span>
           </a>
           <a href={`${base}investor`} class="flex items-center gap-5 group">
-            <span class="w-16 h-16 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                ><path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"
-                ></path></svg
-              >
+            <span class="w-14 h-14 rounded-full bg-primary flex items-center justify-center flex-shrink-0 group-hover:bg-gold transition-colors">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
             </span>
             <span class="text-primary group-hover:text-gold transition-colors">{langData[5].tw}</span>
           </a>
           <a href={`${base}investor-info`} class="flex items-center gap-5 group">
-            <span class="w-16 h-16 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                ><path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg
-              >
+            <span class="w-14 h-14 rounded-full bg-primary flex items-center justify-center flex-shrink-0 group-hover:bg-gold transition-colors">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
             </span>
             <span class="text-primary group-hover:text-gold transition-colors">{langData[6].tw}</span>
           </a>
         </div>
       </div>
-      <a href={`${base}csr-report`} class="block bg-gold/30 px-8 lg:px-10 py-12 lg:py-16 text-center">
-        <span class="text-gold text-xl">✦</span>
-        <h2 class="font-serif text-primary text-2xl lg:text-3xl tracking-[0.3em] mt-2">RECRUIT</h2>
+      <a href={`${base}career`} class="block bg-gold/20 px-8 lg:px-10 py-10 lg:py-14 text-center group hover:bg-gold/30 transition-colors">
+        <h2 class="font-serif text-primary text-2xl lg:text-3xl tracking-[0.3em]">RECRUIT</h2>
         <p class="text-primary/60 text-sm tracking-widest mt-1">{langData[12].tw}</p>
       </a>
     </section>
@@ -139,7 +147,6 @@ const base = import.meta.env.BASE_URL;
 </Layout>
 
 <script>
-  // Banner slider
   let current = 0;
   const slider = document.getElementById('slider');
   const dots = document.querySelectorAll('.slider-dot');
@@ -151,8 +158,14 @@ const base = import.meta.env.BASE_URL;
       slider.style.transform = `translateX(-${current * 100}%)`;
     }
     dots.forEach((dot, i) => {
-      dot.classList.toggle('text-gold', i === current);
-      dot.classList.toggle('text-white/60', i !== current);
+      if (i === current) {
+        dot.classList.replace('bg-white/40', 'bg-gold');
+        dot.classList.add('bg-gold', 'scale-125');
+        dot.classList.remove('bg-white/40');
+      } else {
+        dot.classList.remove('bg-gold', 'scale-125');
+        dot.classList.add('bg-white/40');
+      }
     });
   }
 
