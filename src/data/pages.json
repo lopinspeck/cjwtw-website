@@ -63,132 +63,19 @@
     "error": "No data variable found"
   },
   "financial.html": {
-    "13": {
-      "49": {
-        "f_id": "49",
-        "f_title_tw": "114年2025Q3_5301合併報表",
-        "f_title_en": "2025 Nine Months Consolidated Financial Statements",
-        "f_file": "2025_11_30_1114530.pdf",
-        "fc_id": "13"
-      },
-      "48": {
-        "f_id": "48",
-        "f_title_tw": "114年2025Q2_5301合併報表",
-        "f_title_en": "2025 SIX Months Consolidated Financial Statements",
-        "f_file": "2025_11_30_1112050.pdf",
-        "fc_id": "13"
-      },
-      "47": {
-        "f_id": "47",
-        "f_title_tw": "114年2025Q1_5301合併報表",
-        "f_title_en": "2025 First Quarter Consolidated Financial Statements",
-        "f_file": "2025_11_30_1111380.pdf",
-        "fc_id": "13"
-      }
-    },
-    "9": {
-      "31": {
-        "f_id": "31",
-        "f_title_tw": "113年2024Q4_5301合併報表",
-        "f_title_en": "2024 Consolidated Financial Statements",
-        "f_file": "2025_11_30_1123150.pdf",
-        "fc_id": "9"
-      },
-      "30": {
-        "f_id": "30",
-        "f_title_tw": "113年2024Q3_5301合併報表",
-        "f_title_en": "2024 Nine Months Consolidated Financial Statements",
-        "f_file": "2025_11_30_1123320.pdf",
-        "fc_id": "9"
-      },
-      "29": {
-        "f_id": "29",
-        "f_title_tw": "113年2024Q2_5301合併報表",
-        "f_title_en": "2024 SIX Months Consolidated Financial Statements",
-        "f_file": "2024_11_22_1139480.pdf",
-        "fc_id": "9"
-      },
-      "28": {
-        "f_id": "28",
-        "f_title_tw": "113年2023Q1_5301合併報表",
-        "f_title_en": "2024 First Quarter Consolidated Financial Statements",
-        "f_file": "2024_11_22_1139280.pdf",
-        "fc_id": "9"
-      }
-    },
-    "7": {
-      "27": {
-        "f_id": "27",
-        "f_title_tw": "111年2022Q4_5301合併報表",
-        "f_title_en": "2022 Consolidated Financial Statements",
-        "f_file": "2024_11_22_1529060.pdf",
-        "fc_id": "7"
-      },
-      "26": {
-        "f_id": "26",
-        "f_title_tw": "111年2022Q3_5301合併報表",
-        "f_title_en": "2022 Nine Months Consolidated Financial Statements",
-        "f_file": "2024_11_22_1529320.pdf",
-        "fc_id": "7"
-      },
-      "25": {
-        "f_id": "25",
-        "f_title_tw": "111年2022Q2_5301合併報表",
-        "f_title_en": "2022 SIX Months Consolidated Financial Statements",
-        "f_file": "2024_11_22_1530020.pdf",
-        "fc_id": "7"
-      },
-      "24": {
-        "f_id": "24",
-        "f_title_tw": "111年2022Q1_5301合併報表",
-        "f_title_en": "2022 First Quarter Consolidated Financial Statements",
-        "f_file": "2024_11_22_1530360.pdf",
-        "fc_id": "7"
-      }
-    },
-    "8": {
-      "23": {
-        "f_id": "23",
-        "f_title_tw": "112年2023Q4_5301合併報表",
-        "f_title_en": "2023 Consolidated Financial Statements",
-        "f_file": "2024_11_22_1142300.pdf",
-        "fc_id": "8"
-      },
-      "22": {
-        "f_id": "22",
-        "f_title_tw": "112年2023Q3_5301合併報表",
-        "f_title_en": "2023Nine Months Consolidated Financial Statements",
-        "f_file": "2024_11_22_1142520.pdf",
-        "fc_id": "8"
-      },
-      "21": {
-        "f_id": "21",
-        "f_title_tw": "112年2023Q2_5301合併報表",
-        "f_title_en": "2023 SIX Months Consolidated Financial Statements",
-        "f_file": "2024_11_22_1143110.pdf",
-        "fc_id": "8"
-      },
-      "20": {
-        "f_id": "20",
-        "f_title_tw": "112年2023Q1_5301合併報表",
-        "f_title_en": "2023 First Quarter Consolidated Financial Statements",
-        "f_file": "2024_11_22_1143300.pdf",
-        "fc_id": "8"
-      }
-    },
     "2": {
-      "12": {
-        "f_id": "12",
-        "f_title_tw": "109年2020Q4_5301合併報表",
-        "f_title_en": "2020 Consolidated Financial Statements",
-        "f_file": "2022_05_10_1359170.pdf",
-        "fc_id": "2"
-      },
       "1": {
         "f_id": "1",
         "f_title_tw": "109年2020Q3_5301合併報表",
         "f_title_en": "2020 Nine Months Consolidated Financial Statements",
         "f_file": "2022_05_10_1405060.pdf",
+        "fc_id": "2"
+      },
+      "10": {
+        "f_id": "10",
+        "f_title_tw": "109年2020Q1_5301合併報表",
+        "f_title_en": "2020 First Quarter Consolidated Financial Statements",
+        "f_file": "2022_05_10_1404280.pdf",
         "fc_id": "2"
       },
       "11": {
@@ -198,27 +85,20 @@
         "f_file": "2022_05_10_1359400.pdf",
         "fc_id": "2"
       },
-      "10": {
-        "f_id": "10",
-        "f_title_tw": "109年2020Q1_5301合併報表",
-        "f_title_en": "2020 First Quarter Consolidated Financial Statements",
-        "f_file": "2022_05_10_1404280.pdf",
+      "12": {
+        "f_id": "12",
+        "f_title_tw": "109年2020Q4_5301合併報表",
+        "f_title_en": "2020 Consolidated Financial Statements",
+        "f_file": "2022_05_10_1359170.pdf",
         "fc_id": "2"
       }
     },
     "3": {
-      "9": {
-        "f_id": "9",
-        "f_title_tw": "110年2021Q4_5301合併報表",
-        "f_title_en": "2021 Consolidated Financial Statements",
-        "f_file": "2022_05_10_1243360.pdf",
-        "fc_id": "3"
-      },
-      "8": {
-        "f_id": "8",
-        "f_title_tw": "110年2021Q3_5301合併報表",
-        "f_title_en": "2021 Nine Months Consolidated Financial Statements",
-        "f_file": "2022_05_10_1245260.pdf",
+      "6": {
+        "f_id": "6",
+        "f_title_tw": "110年2021Q1_5301合併報表",
+        "f_title_en": "2021 First Quarter Consolidated Financial Statements",
+        "f_file": "2022_05_04_0935070.pdf",
         "fc_id": "3"
       },
       "7": {
@@ -228,140 +108,147 @@
         "f_file": "2022_05_10_1247190.pdf",
         "fc_id": "3"
       },
-      "6": {
-        "f_id": "6",
-        "f_title_tw": "110年2021Q1_5301合併報表",
-        "f_title_en": "2021 First Quarter Consolidated Financial Statements",
-        "f_file": "2022_05_04_0935070.pdf",
+      "8": {
+        "f_id": "8",
+        "f_title_tw": "110年2021Q3_5301合併報表",
+        "f_title_en": "2021 Nine Months Consolidated Financial Statements",
+        "f_file": "2022_05_10_1245260.pdf",
         "fc_id": "3"
+      },
+      "9": {
+        "f_id": "9",
+        "f_title_tw": "110年2021Q4_5301合併報表",
+        "f_title_en": "2021 Consolidated Financial Statements",
+        "f_file": "2022_05_10_1243360.pdf",
+        "fc_id": "3"
+      }
+    },
+    "7": {
+      "24": {
+        "f_id": "24",
+        "f_title_tw": "111年2022Q1_5301合併報表",
+        "f_title_en": "2022 First Quarter Consolidated Financial Statements",
+        "f_file": "2024_11_22_1530360.pdf",
+        "fc_id": "7"
+      },
+      "25": {
+        "f_id": "25",
+        "f_title_tw": "111年2022Q2_5301合併報表",
+        "f_title_en": "2022 SIX Months Consolidated Financial Statements",
+        "f_file": "2024_11_22_1530020.pdf",
+        "fc_id": "7"
+      },
+      "26": {
+        "f_id": "26",
+        "f_title_tw": "111年2022Q3_5301合併報表",
+        "f_title_en": "2022 Nine Months Consolidated Financial Statements",
+        "f_file": "2024_11_22_1529320.pdf",
+        "fc_id": "7"
+      },
+      "27": {
+        "f_id": "27",
+        "f_title_tw": "111年2022Q4_5301合併報表",
+        "f_title_en": "2022 Consolidated Financial Statements",
+        "f_file": "2024_11_22_1529060.pdf",
+        "fc_id": "7"
+      }
+    },
+    "8": {
+      "20": {
+        "f_id": "20",
+        "f_title_tw": "112年2023Q1_5301合併報表",
+        "f_title_en": "2023 First Quarter Consolidated Financial Statements",
+        "f_file": "2024_11_22_1143300.pdf",
+        "fc_id": "8"
+      },
+      "21": {
+        "f_id": "21",
+        "f_title_tw": "112年2023Q2_5301合併報表",
+        "f_title_en": "2023 SIX Months Consolidated Financial Statements",
+        "f_file": "2024_11_22_1143110.pdf",
+        "fc_id": "8"
+      },
+      "22": {
+        "f_id": "22",
+        "f_title_tw": "112年2023Q3_5301合併報表",
+        "f_title_en": "2023Nine Months Consolidated Financial Statements",
+        "f_file": "2024_11_22_1142520.pdf",
+        "fc_id": "8"
+      },
+      "23": {
+        "f_id": "23",
+        "f_title_tw": "112年2023Q4_5301合併報表",
+        "f_title_en": "2023 Consolidated Financial Statements",
+        "f_file": "2024_11_22_1142300.pdf",
+        "fc_id": "8"
+      }
+    },
+    "9": {
+      "28": {
+        "f_id": "28",
+        "f_title_tw": "113年2023Q1_5301合併報表",
+        "f_title_en": "2024 First Quarter Consolidated Financial Statements",
+        "f_file": "2024_11_22_1139280.pdf",
+        "fc_id": "9"
+      },
+      "29": {
+        "f_id": "29",
+        "f_title_tw": "113年2024Q2_5301合併報表",
+        "f_title_en": "2024 SIX Months Consolidated Financial Statements",
+        "f_file": "2024_11_22_1139480.pdf",
+        "fc_id": "9"
+      },
+      "30": {
+        "f_id": "30",
+        "f_title_tw": "113年2024Q3_5301合併報表",
+        "f_title_en": "2024 Nine Months Consolidated Financial Statements",
+        "f_file": "2025_11_30_1123320.pdf",
+        "fc_id": "9"
+      },
+      "31": {
+        "f_id": "31",
+        "f_title_tw": "113年2024Q4_5301合併報表",
+        "f_title_en": "2024 Consolidated Financial Statements",
+        "f_file": "2025_11_30_1123150.pdf",
+        "fc_id": "9"
+      }
+    },
+    "13": {
+      "47": {
+        "f_id": "47",
+        "f_title_tw": "114年2025Q1_5301合併報表",
+        "f_title_en": "2025 First Quarter Consolidated Financial Statements",
+        "f_file": "2025_11_30_1111380.pdf",
+        "fc_id": "13"
+      },
+      "48": {
+        "f_id": "48",
+        "f_title_tw": "114年2025Q2_5301合併報表",
+        "f_title_en": "2025 SIX Months Consolidated Financial Statements",
+        "f_file": "2025_11_30_1112050.pdf",
+        "fc_id": "13"
+      },
+      "49": {
+        "f_id": "49",
+        "f_title_tw": "114年2025Q3_5301合併報表",
+        "f_title_en": "2025 Nine Months Consolidated Financial Statements",
+        "f_file": "2025_11_30_1114530.pdf",
+        "fc_id": "13"
       }
     }
   },
   "investor.html": {
-    "12": {
-      "46": {
-        "f_id": "46",
-        "f_title_tw": "113年股東會議事錄",
-        "f_title_en": "",
-        "f_file": "2024_11_22_1640570.pdf",
-        "fc_id": "12"
-      },
-      "45": {
-        "f_id": "45",
-        "f_title_tw": "112年年報",
-        "f_title_en": "",
-        "f_file": null,
-        "fc_id": "12"
-      },
-      "44": {
-        "f_id": "44",
-        "f_title_tw": "113年股東會議事手冊",
-        "f_title_en": "",
-        "f_file": "2024_11_22_1641220.pdf",
-        "fc_id": "12"
-      },
-      "43": {
-        "f_id": "43",
-        "f_title_tw": "113年開會通知",
-        "f_title_en": "",
-        "f_file": "2024_11_22_1641410.pdf",
-        "fc_id": "12"
-      }
-    },
-    "11": {
-      "42": {
-        "f_id": "42",
-        "f_title_tw": "112年股東會議事錄",
-        "f_title_en": "",
-        "f_file": "2024_11_22_1545440.pdf",
-        "fc_id": "11"
-      },
-      "41": {
-        "f_id": "41",
-        "f_title_tw": "111年年報",
-        "f_title_en": "",
-        "f_file": "2024_11_22_1544470.pdf",
-        "fc_id": "11"
-      },
-      "40": {
-        "f_id": "40",
-        "f_title_tw": "112年股東會議事手冊",
-        "f_title_en": "",
-        "f_file": "2024_11_22_1544130.pdf",
-        "fc_id": "11"
-      },
-      "39": {
-        "f_id": "39",
-        "f_title_tw": "112年開會通知",
-        "f_title_en": "",
-        "f_file": "2024_11_22_1543520.pdf",
-        "fc_id": "11"
-      }
-    },
-    "6": {
-      "38": {
-        "f_id": "38",
-        "f_title_tw": "110年股東會議事錄",
-        "f_title_en": "",
-        "f_file": null,
-        "fc_id": "6"
-      },
-      "19": {
-        "f_id": "19",
-        "f_title_tw": "109年股東會年報",
-        "f_title_en": "",
-        "f_file": null,
-        "fc_id": "6"
-      },
-      "18": {
-        "f_id": "18",
-        "f_title_tw": "110年議事手冊",
-        "f_title_en": "",
-        "f_file": null,
-        "fc_id": "6"
-      },
-      "17": {
-        "f_id": "17",
-        "f_title_tw": "110年開會通知",
-        "f_title_en": "",
-        "f_file": null,
-        "fc_id": "6"
-      }
-    },
-    "10": {
-      "35": {
-        "f_id": "35",
-        "f_title_tw": "111年股東會議事錄",
-        "f_title_en": "",
-        "f_file": "2024_11_22_1536290.pdf",
-        "fc_id": "10"
-      },
-      "34": {
-        "f_id": "34",
-        "f_title_tw": "110年年報",
-        "f_title_en": "",
-        "f_file": "2024_11_22_1537010.pdf",
-        "fc_id": "10"
-      },
-      "33": {
-        "f_id": "33",
-        "f_title_tw": "111年股東會議事手冊",
-        "f_title_en": "",
-        "f_file": "2024_11_22_1537180.pdf",
-        "fc_id": "10"
-      },
-      "32": {
-        "f_id": "32",
-        "f_title_tw": "111年開會知",
-        "f_title_en": "",
-        "f_file": "2024_11_22_1537410.pdf",
-        "fc_id": "10"
-      }
-    },
     "5": {
       "2": {
         "f_id": "2",
         "f_title_tw": "109年開會通知",
+        "f_title_en": "",
+        "f_file": null,
+        "fc_id": "5"
+      },
+      "3": {
+        "f_id": "3",
+        "f_title_tw": "109年股東會議事錄",
         "f_title_en": "",
         "f_file": null,
         "fc_id": "5"
@@ -379,13 +266,126 @@
         "f_title_en": "",
         "f_file": null,
         "fc_id": "5"
-      },
-      "3": {
-        "f_id": "3",
-        "f_title_tw": "109年股東會議事錄",
+      }
+    },
+    "6": {
+      "17": {
+        "f_id": "17",
+        "f_title_tw": "110年開會通知",
         "f_title_en": "",
         "f_file": null,
-        "fc_id": "5"
+        "fc_id": "6"
+      },
+      "18": {
+        "f_id": "18",
+        "f_title_tw": "110年議事手冊",
+        "f_title_en": "",
+        "f_file": null,
+        "fc_id": "6"
+      },
+      "19": {
+        "f_id": "19",
+        "f_title_tw": "109年股東會年報",
+        "f_title_en": "",
+        "f_file": null,
+        "fc_id": "6"
+      },
+      "38": {
+        "f_id": "38",
+        "f_title_tw": "110年股東會議事錄",
+        "f_title_en": "",
+        "f_file": null,
+        "fc_id": "6"
+      }
+    },
+    "10": {
+      "32": {
+        "f_id": "32",
+        "f_title_tw": "111年開會知",
+        "f_title_en": "",
+        "f_file": "2024_11_22_1537410.pdf",
+        "fc_id": "10"
+      },
+      "33": {
+        "f_id": "33",
+        "f_title_tw": "111年股東會議事手冊",
+        "f_title_en": "",
+        "f_file": "2024_11_22_1537180.pdf",
+        "fc_id": "10"
+      },
+      "34": {
+        "f_id": "34",
+        "f_title_tw": "110年年報",
+        "f_title_en": "",
+        "f_file": "2024_11_22_1537010.pdf",
+        "fc_id": "10"
+      },
+      "35": {
+        "f_id": "35",
+        "f_title_tw": "111年股東會議事錄",
+        "f_title_en": "",
+        "f_file": "2024_11_22_1536290.pdf",
+        "fc_id": "10"
+      }
+    },
+    "11": {
+      "39": {
+        "f_id": "39",
+        "f_title_tw": "112年開會通知",
+        "f_title_en": "",
+        "f_file": "2024_11_22_1543520.pdf",
+        "fc_id": "11"
+      },
+      "40": {
+        "f_id": "40",
+        "f_title_tw": "112年股東會議事手冊",
+        "f_title_en": "",
+        "f_file": "2024_11_22_1544130.pdf",
+        "fc_id": "11"
+      },
+      "41": {
+        "f_id": "41",
+        "f_title_tw": "111年年報",
+        "f_title_en": "",
+        "f_file": "2024_11_22_1544470.pdf",
+        "fc_id": "11"
+      },
+      "42": {
+        "f_id": "42",
+        "f_title_tw": "112年股東會議事錄",
+        "f_title_en": "",
+        "f_file": "2024_11_22_1545440.pdf",
+        "fc_id": "11"
+      }
+    },
+    "12": {
+      "43": {
+        "f_id": "43",
+        "f_title_tw": "113年開會通知",
+        "f_title_en": "",
+        "f_file": "2024_11_22_1641410.pdf",
+        "fc_id": "12"
+      },
+      "44": {
+        "f_id": "44",
+        "f_title_tw": "113年股東會議事手冊",
+        "f_title_en": "",
+        "f_file": "2024_11_22_1641220.pdf",
+        "fc_id": "12"
+      },
+      "45": {
+        "f_id": "45",
+        "f_title_tw": "112年年報",
+        "f_title_en": "",
+        "f_file": null,
+        "fc_id": "12"
+      },
+      "46": {
+        "f_id": "46",
+        "f_title_tw": "113年股東會議事錄",
+        "f_title_en": "",
+        "f_file": "2024_11_22_1640570.pdf",
+        "fc_id": "12"
       }
     }
   },
@@ -436,5 +436,8 @@
   },
   "video.html": {
     "error": "No data variable found"
+  },
+  "about-2.html": {
+    "a_text_tw": "<h4><img alt=\"\" src=\"/upload/images/2022_05_25_123525.jpg\" style=\"height:332px; width:1000px\"></h4><p><img alt=\"\" src=\"/upload/images/2022_05_25_231703(1).jpg\" style=\"height:332px; width:1000px\"></p><h4><strong><span style=\"font-size:22px\">信守品質 嚴格把關 堅守信念 始終如一</span></strong></h4><p><span style=\"font-size:22px\">本公司設立於民國67年10月,於民國68年10月正式開始營業，主要營業項目為印刷電路板，自民國101年10月起變更主要營業項目為珠寶精品之設計與銷售及菸酒、美妝等批發及零售。本公司主要產品為鑽石、台灣玉石及珊瑚飾品等產品買賣；主要客戶為旅行社接待國外來台之觀光團體旅客。 始終秉持「品質把關　行銷台灣」經營理念是寶得利多年來不變的堅持與理念，始終如一。以親力親為、認真積極的態度，著眼於對岸來台旅遊，成為台灣漂亮的第一線形象外交。</span></p><p>&nbsp;</p><h4><strong><span style=\"font-size:22px\">魅力台灣 全新打造 美好回憶 刺激經濟</span></strong></h4><p><span style=\"font-size:22px\">目前台灣整體觀光客成長以大陸觀光客為主要來源，對岸造訪台灣，爭賭寶島風貌的來客量逐年增加。而具有濃厚台灣代表性的商品，則成為訪台旅客們最佳首選。 寶得利國際於台灣觀光精品中享譽盛名。耗費巨資打造出時尚、舒適的精品購物中心，提供最專業的服務品質，希望讓所有造訪的貴賓擁有舒適又安心的購物環境。本公司提供優美良善的台灣工藝品，透過精雕細琢的「台灣精神」，成為造訪寶島的紀念珍藏，將台灣特有的美善傳遞到對岸。 多年來，寶得利奉守著「三心二用」理念－熱心、細心、關心招待每一位客人；用心、用材對待每一名員工。讓寶得利的每一份子擁有熱情積極的態度面對消費者，也讓所有光顧的旅客心滿意足地帶著台灣美好回憶。</span></p>"
   }
 }
