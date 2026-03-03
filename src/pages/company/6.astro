@@ -3,13 +3,13 @@ import SubPageLayout from '../../components/SubPageLayout.astro';
 
 const base = import.meta.env.BASE_URL;
 const menuItems = [
-  { id: "2", label: "經營者話", href: `${base}company/2` },
-  { id: "1", label: "公司治理運作", href: `${base}company/1` },
-  { id: "4", label: "功能性委員會", href: `${base}company/4` },
-  { id: "3", label: "董事會", href: `${base}company/3` },
-  { id: "6", label: "公司治理相關程序及辦法", href: `${base}company/6` },
-  { id: "7", label: "內部稽核組織及運作", href: `${base}company/7` },
-  { id: "5", label: "企業社會責任", href: `${base}company/5` },
+  { id: '2', label: '經營者話', href: `${base}company/2` },
+  { id: '1', label: '公司治理運作', href: `${base}company/1` },
+  { id: '4', label: '功能性委員會', href: `${base}company/4` },
+  { id: '3', label: '董事會', href: `${base}company/3` },
+  { id: '6', label: '公司治理相關程序及辦法', href: `${base}company/6` },
+  { id: '7', label: '內部稽核組織及運作', href: `${base}company/7` },
+  { id: '5', label: '企業社會責任', href: `${base}company/5` },
 ];
 ---
 
@@ -21,23 +21,51 @@ const menuItems = [
   activeId="6"
 >
   <ul>
-	<li><span style="font-size:20px"><a href="/cjwtw-website/upload/files/2022_05_10_170912.pdf">公司章程</a></span></li>
-	<li><span style="font-size:20px"><a href="/cjwtw-website/upload/files/2022_05_10_170952.pdf">董事選舉辦法</a></span></li>
-	<li><span style="font-size:20px"><a href="/cjwtw-website/upload/files/2022_05_10_171014.pdf">股東會議事規則</a></span></li>
-	<li><span style="font-size:20px"><a href="/cjwtw-website/upload/files/2022_05_10_171142.pdf">董事會議事規範</a></span></li>
-	<li><span style="font-size:20px"><a href="/cjwtw-website/upload/files/2022_05_10_171157.pdf">薪資報酬委員會組織章程</a></span></li>
-	<li><span style="font-size:20px"><a href="/cjwtw-website/upload/files/2022_05_10_171233.pdf">審計委員會組織章程</a></span></li>
-	<li><span style="font-size:20px"><a href="/cjwtw-website/upload/files/2022_05_10_171505.pdf">取得或處分資產處理程序</a></span></li>
-	<li><span style="font-size:20px"><a href="/cjwtw-website/upload/files/2022_05_10_171625.pdf">資金貸與他人作業辦法</a></span></li>
-	<li><span style="font-size:20px"><a href="/cjwtw-website/upload/files/2022_05_10_171654.pdf">背書保證作業辦法</a></span></li>
-	<li><span style="font-size:20px"><a href="/cjwtw-website/upload/files/2022_05_10_171821.pdf">誠信經營作業程序及行為指南</a></span></li>
-	<li><span style="font-size:20px"><a href="/cjwtw-website/upload/files/2022_05_10_171845.pdf">企業社會責任實務守則</a></span></li>
-	<li><span style="font-size:20px">董事及監察人選舉辦法</span></li>
-	<li><span style="font-size:20px">道德行為準則</span></li>
-	<li><span style="font-size:20px">防範內線交易之管理</span></li>
-	<li><span style="font-size:20px">檢舉非法與不道德或不誠信行為案件之處理辦法</span></li>
-	<li><span style="font-size:20px">董事會績效評估辦法</span></li>
-	<li><span style="font-size:20px">公司治理實務守則</span></li>
-</ul>
-
+    <li>
+      <span style="font-size:20px"><a href="/cjwtw-website/upload/files/2022_05_10_170912.pdf">公司章程</a></span>
+    </li>
+    <li>
+      <span style="font-size:20px"><a href="/cjwtw-website/upload/files/2022_05_10_170952.pdf">董事選舉辦法</a></span>
+    </li>
+    <li>
+      <span style="font-size:20px"><a href="/cjwtw-website/upload/files/2022_05_10_171014.pdf">股東會議事規則</a></span>
+    </li>
+    <li>
+      <span style="font-size:20px"><a href="/cjwtw-website/upload/files/2022_05_10_171142.pdf">董事會議事規範</a></span>
+    </li>
+    <li>
+      <span style="font-size:20px"
+        ><a href="/cjwtw-website/upload/files/2022_05_10_171157.pdf">薪資報酬委員會組織章程</a></span>
+    </li>
+    <li>
+      <span style="font-size:20px"
+        ><a href="/cjwtw-website/upload/files/2022_05_10_171233.pdf">審計委員會組織章程</a></span>
+    </li>
+    <li>
+      <span style="font-size:20px"
+        ><a href="/cjwtw-website/upload/files/2022_05_10_171505.pdf">取得或處分資產處理程序</a></span>
+    </li>
+    <li>
+      <span style="font-size:20px"
+        ><a href="/cjwtw-website/upload/files/2022_05_10_171625.pdf">資金貸與他人作業辦法</a></span>
+    </li>
+    <li>
+      <span style="font-size:20px"
+        ><a href="/cjwtw-website/upload/files/2022_05_10_171654.pdf">背書保證作業辦法</a></span>
+    </li>
+    <li>
+      <span style="font-size:20px"
+        ><a href="/cjwtw-website/upload/files/2022_05_10_171821.pdf">誠信經營作業程序及行為指南</a></span>
+    </li>
+    <li>
+      <span style="font-size:20px"
+        ><a href="/cjwtw-website/upload/files/2022_05_10_171845.pdf">企業社會責任實務守則</a></span>
+    </li>
+    <li><span style="font-size:20px">董事及監察人選舉辦法</span></li>
+    <li><span style="font-size:20px">道德行為準則</span></li>
+    <li><span style="font-size:20px">防範內線交易之管理</span></li>
+    <li><span style="font-size:20px">檢舉非法與不道德或不誠信行為案件之處理辦法</span></li>
+    <li><span style="font-size:20px">董事會績效評估辦法</span></li>
+    <li><span style="font-size:20px">公司治理實務守則</span></li>
+  </ul>
 </SubPageLayout>

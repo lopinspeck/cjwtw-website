@@ -16,21 +16,23 @@ const { items, activeId } = Astro.props;
 <aside class="w-full lg:w-64 flex-shrink-0">
   <div class="bg-primary/5 rounded-lg overflow-hidden lg:sticky lg:top-24">
     <ul class="flex lg:flex-col overflow-x-auto lg:overflow-x-visible">
-      {items.map((item) => (
-        <li class="flex-shrink-0">
-          <a
-            href={item.href}
-            class:list={[
-              'block px-6 py-3 text-sm whitespace-nowrap transition-colors border-b border-white/5',
-              String(item.id) === String(activeId)
-                ? 'bg-primary text-gold font-bold'
-                : 'text-primary/70 hover:bg-primary/10 hover:text-primary',
-            ]}
-          >
-            {item.label}
-          </a>
-        </li>
-      ))}
+      {
+        items.map((item) => (
+          <li class="flex-shrink-0">
+            <a
+              href={item.href}
+              class:list={[
+                'block px-6 py-3 text-sm whitespace-nowrap transition-colors border-b border-white/5',
+                String(item.id) === String(activeId)
+                  ? 'bg-primary text-gold font-bold'
+                  : 'text-primary/70 hover:bg-primary/10 hover:text-primary',
+              ]}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
     </ul>
   </div>
 </aside>

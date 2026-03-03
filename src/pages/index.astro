@@ -9,12 +9,28 @@ const base = import.meta.env.BASE_URL;
   <section id="banner" class="relative w-full h-[calc(100vh-4rem)] lg:h-[calc(100vh-5rem)] overflow-hidden">
     <div id="slider" class="flex h-full transition-transform duration-700 ease-in-out">
       <div class="slide w-full h-full flex-shrink-0">
-        <img src={`${base}images/2021_02_14_1140321.jpeg`} alt="Banner 1" class="w-full h-full object-cover hidden md:block" />
-        <img src={`${base}images/2021_02_14_1140322.jpeg`} alt="Banner 1 Mobile" class="w-full h-full object-cover md:hidden" />
+        <img
+          src={`${base}images/2021_02_14_1140321.jpeg`}
+          alt="Banner 1"
+          class="w-full h-full object-cover hidden md:block"
+        />
+        <img
+          src={`${base}images/2021_02_14_1140322.jpeg`}
+          alt="Banner 1 Mobile"
+          class="w-full h-full object-cover md:hidden"
+        />
       </div>
       <div class="slide w-full h-full flex-shrink-0">
-        <img src={`${base}images/2021_02_14_1140221.jpeg`} alt="Banner 2" class="w-full h-full object-cover hidden md:block" />
-        <img src={`${base}images/2021_02_14_1140222.jpeg`} alt="Banner 2 Mobile" class="w-full h-full object-cover md:hidden" />
+        <img
+          src={`${base}images/2021_02_14_1140221.jpeg`}
+          alt="Banner 2"
+          class="w-full h-full object-cover hidden md:block"
+        />
+        <img
+          src={`${base}images/2021_02_14_1140222.jpeg`}
+          alt="Banner 2 Mobile"
+          class="w-full h-full object-cover md:hidden"
+        />
       </div>
     </div>
     <!-- Slider indicators -->
@@ -29,7 +45,10 @@ const base = import.meta.env.BASE_URL;
   <!-- Three Column Section -->
   <main class="flex flex-col lg:flex-row">
     <!-- Left Column: Image -->
-    <section class="hidden lg:block lg:w-1/3 bg-cover bg-center" style={`background-image: url('${base}images/left_image.jpg')`}>
+    <section
+      class="hidden lg:block lg:w-1/3 bg-cover bg-center"
+      style={`background-image: url('${base}images/left_image.jpg')`}
+    >
     </section>
 
     <!-- Middle Column: NEWS + News Image -->
@@ -38,19 +57,30 @@ const base = import.meta.env.BASE_URL;
         <h2 class="font-serif text-primary text-2xl lg:text-3xl tracking-[0.2em] mb-1">NEWS</h2>
         <p class="text-primary/50 text-sm tracking-widest mb-8">{langData[8].tw}</p>
         <ul class="space-y-6">
-          {Object.entries(newsData).map(([id, item]) => (
-            <li>
-              <a href={`${base}news/${id}`} class="flex items-center justify-between group text-primary hover:text-gold transition-colors">
-                <span class="pr-4 leading-relaxed">{item.tw}</span>
-                <span class="flex-shrink-0 w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center group-hover:border-gold transition-colors">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                </span>
-              </a>
-            </li>
-          ))}
+          {
+            Object.entries(newsData).map(([id, item]) => (
+              <li>
+                <a
+                  href={`${base}news/${id}`}
+                  class="flex items-center justify-between group text-primary hover:text-gold transition-colors"
+                >
+                  <span class="pr-4 leading-relaxed">{item.tw}</span>
+                  <span class="flex-shrink-0 w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center group-hover:border-gold transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </span>
+                </a>
+              </li>
+            ))
+          }
         </ul>
       </div>
-      <div class="h-64 lg:h-auto lg:flex-1 bg-cover bg-center" style={`background-image: url('${base}images/news_image.jpg')`}></div>
+      <div
+        class="h-64 lg:h-auto lg:flex-1 bg-cover bg-center"
+        style={`background-image: url('${base}images/news_image.jpg')`}
+      >
+      </div>
     </section>
 
     <!-- Right Column: Investor Zone + Recruit -->
@@ -61,19 +91,39 @@ const base = import.meta.env.BASE_URL;
         <div class="space-y-6">
           <a href={`${base}financial`} class="flex items-center gap-5 group">
             <span class="w-16 h-16 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                ></path></svg
+              >
             </span>
             <span class="text-primary group-hover:text-gold transition-colors">{langData[4].tw}</span>
           </a>
           <a href={`${base}investor`} class="flex items-center gap-5 group">
             <span class="w-16 h-16 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"
+                ></path></svg
+              >
             </span>
             <span class="text-primary group-hover:text-gold transition-colors">{langData[5].tw}</span>
           </a>
           <a href={`${base}investor-info`} class="flex items-center gap-5 group">
             <span class="w-16 h-16 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg
+              >
             </span>
             <span class="text-primary group-hover:text-gold transition-colors">{langData[6].tw}</span>
           </a>
@@ -106,11 +156,13 @@ const base = import.meta.env.BASE_URL;
     });
   }
 
-  dots.forEach(dot => {
+  dots.forEach((dot) => {
     dot.addEventListener('click', () => {
       goTo(Number((dot as HTMLElement).dataset.index));
     });
   });
 
-  setInterval(() => { goTo((current + 1) % total); }, 5000);
+  setInterval(() => {
+    goTo((current + 1) % total);
+  }, 5000);
 </script>

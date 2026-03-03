@@ -3,21 +3,34 @@ import SubPageLayout from '../../components/SubPageLayout.astro';
 
 const base = import.meta.env.BASE_URL;
 const menuItems = [
-  { id: "5", label: "寶得利子公司-完美比例與中國國際航空簽署貨運承攬業務", href: `${base}news/5` },
-  { id: "1", label: "寶得利首間馬來西亞據點揭牌報導", href: `${base}news/1` },
-  { id: "3", label: "金門高梁酒 限量優惠活動", href: `${base}news/3` },
+  { id: '5', label: '寶得利子公司-完美比例與中國國際航空簽署貨運承攬業務', href: `${base}news/5` },
+  { id: '1', label: '寶得利首間馬來西亞據點揭牌報導', href: `${base}news/1` },
+  { id: '3', label: '金門高梁酒 限量優惠活動', href: `${base}news/3` },
 ];
 ---
 
-<SubPageLayout
-  title="金門高梁酒 限量優惠活動"
-  titleEn="NEWS"
-  titleTw="新消息"
-  menuItems={menuItems}
-  activeId="3"
->
-  <p><img alt="" src="/cjwtw-website/images/upload/2022_02_09_122200.jpg" style="height:1254px; width:934px" /><img alt="" src="/cjwtw-website/images/upload/2022_05_25_231700(1).jpg" style="height:1254px; width:934px" /></p>
+<SubPageLayout title="金門高梁酒 限量優惠活動" titleEn="NEWS" titleTw="新消息" menuItems={menuItems} activeId="3">
+  <p>
+    <img alt="" src="/cjwtw-website/images/upload/2022_02_09_122200.jpg" style="height:1254px; width:934px" /><img
+      alt=""
+      src="/cjwtw-website/images/upload/2022_05_25_231700(1).jpg"
+      style="height:1254px; width:934px"
+    />
+  </p>
 
-<p><span style="font-size:12.0pt"><span style="font-family:"Calibri","sans-serif""><a href="http://www.cjwtaiwan.com/cjw_collection.html" style="color:blue; text-decoration:underline" target="_blank"><span style="font-size:15.0pt"><span style="font-family:"新細明體","serif""><span style="color:#0782c1">《《《點我詳細介紹》》》》</span></span></span></a></span></span></p>
-
+  <p>
+    <span style="font-size:12.0pt"
+      ><span style="font-family:" Calibri","sans-serif""
+        ><a
+          href="http://www.cjwtaiwan.com/cjw_collection.html"
+          style="color:blue; text-decoration:underline"
+          target="_blank"
+          ><span style="font-size:15.0pt"
+            ><span style="font-family:" 新細明體","serif""
+              ><span style="color:#0782c1">《《《點我詳細介紹》》》》</span></span
+            ></span
+          ></a
+        ></span
+      ></span>
+  </p>
 </SubPageLayout>

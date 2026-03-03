@@ -3,26 +3,24 @@ import SubPageLayout from '../../components/SubPageLayout.astro';
 
 const base = import.meta.env.BASE_URL;
 const menuItems = [
-  { id: "2", label: "經營者話", href: `${base}company/2` },
-  { id: "1", label: "公司治理運作", href: `${base}company/1` },
-  { id: "4", label: "功能性委員會", href: `${base}company/4` },
-  { id: "3", label: "董事會", href: `${base}company/3` },
-  { id: "6", label: "公司治理相關程序及辦法", href: `${base}company/6` },
-  { id: "7", label: "內部稽核組織及運作", href: `${base}company/7` },
-  { id: "5", label: "企業社會責任", href: `${base}company/5` },
+  { id: '2', label: '經營者話', href: `${base}company/2` },
+  { id: '1', label: '公司治理運作', href: `${base}company/1` },
+  { id: '4', label: '功能性委員會', href: `${base}company/4` },
+  { id: '3', label: '董事會', href: `${base}company/3` },
+  { id: '6', label: '公司治理相關程序及辦法', href: `${base}company/6` },
+  { id: '7', label: '內部稽核組織及運作', href: `${base}company/7` },
+  { id: '5', label: '企業社會責任', href: `${base}company/5` },
 ];
 ---
 
-<SubPageLayout
-  title="董事會"
-  titleEn="Corporate Governance"
-  titleTw="公司治理"
-  menuItems={menuItems}
-  activeId="3"
->
-  <h2 style="text-align:start"><br />
-<span style="color:#333333"><span style="font-family:sans-serif,Arial,Verdana,"Trebuchet MS""><span style="font-family:微軟正黑體">第二十七屆董事名單</span></span></span></h2>
+<SubPageLayout title="董事會" titleEn="Corporate Governance" titleTw="公司治理" menuItems={menuItems} activeId="3">
+  <h2 style="text-align:start">
+    <br />
+    <span style="color:#333333"
+      ><span style="font-family:sans-serif,Arial,Verdana," Trebuchet MS""
+        ><span style="font-family:微軟正黑體">第二十七屆董事名單</span></span
+      ></span>
+  </h2>
 
-<p><img alt="" src="/cjwtw-website/images/upload/2025_11_30_102733.jpg" style="height:802px; width:1600px" /></p>
-
+  <p><img alt="" src="/cjwtw-website/images/upload/2025_11_30_102733.jpg" style="height:802px; width:1600px" /></p>
 </SubPageLayout>

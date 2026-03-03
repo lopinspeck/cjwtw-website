@@ -19,12 +19,18 @@ const base = import.meta.env.BASE_URL;
     <link rel="icon" type="image/x-icon" href={`${base}images/favicon.ico`} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <title>{title}</title>
   </head>
   <body class="font-sans text-gray-800">
     <!-- Loading -->
-    <div id="loading" class="fixed inset-0 z-[9999] bg-primary flex items-center justify-center transition-opacity duration-500">
+    <div
+      id="loading"
+      class="fixed inset-0 z-[9999] bg-primary flex items-center justify-center transition-opacity duration-500"
+    >
       <div class="text-gold text-2xl font-serif tracking-widest">Loading<span class="animate-pulse">...</span></div>
     </div>
 
@@ -39,16 +45,18 @@ const base = import.meta.env.BASE_URL;
         const loading = document.getElementById('loading');
         if (loading) {
           loading.style.opacity = '0';
-          setTimeout(() => { loading.style.display = 'none'; }, 500);
+          setTimeout(() => {
+            loading.style.display = 'none';
+          }, 500);
         }
       });
 
       // Language switching
-      document.querySelectorAll('.lang-btn').forEach(btn => {
+      document.querySelectorAll('.lang-btn').forEach((btn) => {
         btn.addEventListener('click', () => {
           const lang = btn.dataset.lang;
           localStorage.setItem('cjw_lang', lang);
-          document.querySelectorAll('.lang-btn').forEach(b => {
+          document.querySelectorAll('.lang-btn').forEach((b) => {
             b.classList.toggle('text-gold', b.dataset.lang === lang);
             b.classList.toggle('border-gold', b.dataset.lang === lang);
             b.classList.toggle('active', b.dataset.lang === lang);

@@ -78,22 +78,42 @@ const reports = [
   <section class="mb-12">
     <h2 class="text-2xl font-bold text-primary border-b-2 border-gold pb-2 mb-6">{langData[19].tw}</h2>
     <div class="space-y-6">
-      {reports.map((group) => (
-        <details class="group border border-gray-200 rounded-lg" open>
-          <summary class="px-6 py-4 cursor-pointer font-bold text-primary hover:text-gold transition-colors flex justify-between items-center">
-            {group.title}
-            <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          </summary>
-          <div class="px-6 pb-4 space-y-2">
-            {group.files.map((file) => (
-              <a href={file.href} target="_blank" class="block text-primary/70 hover:text-gold transition-colors py-1">
-                <svg class="w-4 h-4 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                {file.name}
-              </a>
-            ))}
-          </div>
-        </details>
-      ))}
+      {
+        reports.map((group) => (
+          <details class="group border border-gray-200 rounded-lg" open>
+            <summary class="px-6 py-4 cursor-pointer font-bold text-primary hover:text-gold transition-colors flex justify-between items-center">
+              {group.title}
+              <svg
+                class="w-5 h-5 transition-transform group-open:rotate-180"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-4 space-y-2">
+              {group.files.map((file) => (
+                <a
+                  href={file.href}
+                  target="_blank"
+                  class="block text-primary/70 hover:text-gold transition-colors py-1"
+                >
+                  <svg class="w-4 h-4 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    />
+                  </svg>
+                  {file.name}
+                </a>
+              ))}
+            </div>
+          </details>
+        ))
+      }
     </div>
   </section>
 
@@ -102,7 +122,11 @@ const reports = [
     <h2 class="text-2xl font-bold text-primary border-b-2 border-gold pb-2 mb-6">{langData[20].tw}</h2>
     <div class="prose max-w-none">
       <h4>重大訊息</h4>
-      <p>寶得利國際股份有限公司係於1990年6月於中華民國證券櫃檯買賣中心掛牌上櫃 (股票代號: 5301)，投資相關資訊請至公開資訊觀測站網站參閱 查詢頁面請依下述步驟 公司代號：5301→ 年度：110年 → 月份：全年度 → 搜尋</p>
+      <p>
+        寶得利國際股份有限公司係於1990年6月於中華民國證券櫃檯買賣中心掛牌上櫃 (股票代號:
+        5301)，投資相關資訊請至公開資訊觀測站網站參閱 查詢頁面請依下述步驟 公司代號：5301→ 年度：110年 → 月份：全年度 →
+        搜尋
+      </p>
     </div>
   </section>
 </SubPageLayout>

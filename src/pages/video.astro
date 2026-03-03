@@ -8,18 +8,25 @@ import { videoData } from '../data/lang.js';
   <Banner titleEn="Video Zone" titleTw="影音專區" />
   <main class="max-w-7xl mx-auto px-4 py-10 lg:py-16">
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {Object.entries(videoData).map(([id, item]) => (
-        <div class="video-card bg-white rounded-lg shadow overflow-hidden cursor-pointer group" data-video={item.video}>
-          <div class="aspect-video bg-primary/5 flex items-center justify-center relative">
-            <div class="absolute inset-0 flex items-center justify-center bg-primary/20 group-hover:bg-primary/40 transition-colors">
-              <svg class="w-16 h-16 text-white/80" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+      {
+        Object.entries(videoData).map(([id, item]) => (
+          <div
+            class="video-card bg-white rounded-lg shadow overflow-hidden cursor-pointer group"
+            data-video={item.video}
+          >
+            <div class="aspect-video bg-primary/5 flex items-center justify-center relative">
+              <div class="absolute inset-0 flex items-center justify-center bg-primary/20 group-hover:bg-primary/40 transition-colors">
+                <svg class="w-16 h-16 text-white/80" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="text-primary font-bold">{item.tw}</h3>
             </div>
           </div>
-          <div class="p-4">
-            <h3 class="text-primary font-bold">{item.tw}</h3>
-          </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
 
     <!-- Video Modal -->
@@ -37,7 +44,7 @@ import { videoData } from '../data/lang.js';
   const container = document.getElementById('video-container');
   const closeBtn = document.getElementById('close-modal');
 
-  document.querySelectorAll('.video-card').forEach(card => {
+  document.querySelectorAll('.video-card').forEach((card) => {
     card.addEventListener('click', () => {
       const videoUrl = card.dataset.video;
       if (videoUrl && container && modal) {

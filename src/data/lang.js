@@ -14,7 +14,10 @@ export const langData = {
   13: { tw: '報告書下載', en: 'CSR' },
   14: { tw: '影音專區', en: 'Video Zone' },
   15: { tw: '聯絡我們', en: 'Contact' },
-  16: { tw: '台北市中山區新生北路二段28巷1號B1', en: 'B1 No. 1, Ln. 28, Sec. 2, Xinsheng N. Rd., Zhongshan Dist., Taipei City 104, Taiwan (R.O.C.)' },
+  16: {
+    tw: '台北市中山區新生北路二段28巷1號B1',
+    en: 'B1 No. 1, Ln. 28, Sec. 2, Xinsheng N. Rd., Zhongshan Dist., Taipei City 104, Taiwan (R.O.C.)',
+  },
   17: { tw: 'ning@cjwtaiwan.com', en: 'ning@cjwtaiwan.com' },
   18: { tw: '02-8921-1333#788', en: '+886-2-8921-1333#788' },
   19: { tw: '年度及期中報告', en: 'Annual and Interim Reports' },
@@ -24,14 +27,20 @@ export const langData = {
   23: { tw: '下載', en: 'DOWNLOAD' },
   24: { tw: '寶得利國際股份有限公司', en: 'CJW International Co., Ltd.' },
   25: { tw: '公司地址', en: 'Company Address' },
-  26: { tw: '台北市中山區新生北路二段28巷1號B1', en: 'B1 No. 1, Ln. 28, Sec. 2, Xinsheng N. Rd., Zhongshan Dist., Taipei City 104, Taiwan (R.O.C.)' },
+  26: {
+    tw: '台北市中山區新生北路二段28巷1號B1',
+    en: 'B1 No. 1, Ln. 28, Sec. 2, Xinsheng N. Rd., Zhongshan Dist., Taipei City 104, Taiwan (R.O.C.)',
+  },
   27: { tw: '窗口', en: 'Contact Person' },
   28: { tw: '寧先生', en: 'MR.Ning' },
   29: { tw: '聯絡電話', en: 'Contact Number' },
   30: { tw: '02-8921-1333#788', en: '+886-2-8921-1333#788' },
   31: { tw: 'E-MAIL', en: 'E-MAIL' },
   32: { tw: 'ning@cjwtaiwan.com', en: 'ning@cjwtaiwan.com' },
-  33: { tw: '如有任何問題，歡迎來電或E-mail洽詢，我們將盡快與您聯繫，謝謝。', en: 'If you have any questions, please feel free to call or E-mail us. We will contact you as soon as possible. Thank you.' },
+  33: {
+    tw: '如有任何問題，歡迎來電或E-mail洽詢，我們將盡快與您聯繫，謝謝。',
+    en: 'If you have any questions, please feel free to call or E-mail us. We will contact you as soon as possible. Thank you.',
+  },
   34: { tw: '公司名稱', en: 'Company Name' },
   35: { tw: '請輸入公司名稱', en: '' },
   36: { tw: '聯絡人', en: 'Contact Person' },
@@ -68,7 +77,10 @@ export const comData = {
 };
 
 export const newsData = {
-  5: { tw: '寶得利子公司-完美比例與中國國際航空簽署貨運承攬業務', en: 'CJW GROUP Signed a cargo contract business with Air China Limited' },
+  5: {
+    tw: '寶得利子公司-完美比例與中國國際航空簽署貨運承攬業務',
+    en: 'CJW GROUP Signed a cargo contract business with Air China Limited',
+  },
   1: { tw: '寶得利首間馬來西亞據點揭牌報導', en: 'CJW Malaysia Stronghold Unveiling News' },
   3: { tw: '金門高梁酒 限量優惠活動', en: 'Kinmen kaoliang liquor Liquor Limited Offer' },
 };
