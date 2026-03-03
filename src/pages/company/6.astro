@@ -11,6 +11,29 @@ const menuItems = [
   { id: '7', label: '內部稽核組織及運作', href: `${base}company/7` },
   { id: '5', label: '企業社會責任', href: `${base}company/5` },
 ];
+
+const docs = [
+  { name: '公司章程', href: '/cjwtw-website/upload/files/2022_05_10_170912.pdf' },
+  { name: '董事選舉辦法', href: '/cjwtw-website/upload/files/2022_05_10_170952.pdf' },
+  { name: '股東會議事規則', href: '/cjwtw-website/upload/files/2022_05_10_171014.pdf' },
+  { name: '董事會議事規範', href: '/cjwtw-website/upload/files/2022_05_10_171142.pdf' },
+  { name: '薪資報酬委員會組織章程', href: '/cjwtw-website/upload/files/2022_05_10_171157.pdf' },
+  { name: '審計委員會組織章程', href: '/cjwtw-website/upload/files/2022_05_10_171233.pdf' },
+  { name: '取得或處分資產處理程序', href: '/cjwtw-website/upload/files/2022_05_10_171505.pdf' },
+  { name: '資金貸與他人作業辦法', href: '/cjwtw-website/upload/files/2022_05_10_171625.pdf' },
+  { name: '背書保證作業辦法', href: '/cjwtw-website/upload/files/2022_05_10_171654.pdf' },
+  { name: '誠信經營作業程序及行為指南', href: '/cjwtw-website/upload/files/2022_05_10_171821.pdf' },
+  { name: '企業社會責任實務守則', href: '/cjwtw-website/upload/files/2022_05_10_171845.pdf' },
+];
+
+const docsNoLink = [
+  '董事及監察人選舉辦法',
+  '道德行為準則',
+  '防範內線交易之管理',
+  '檢舉非法與不道德或不誠信行為案件之處理辦法',
+  '董事會績效評估辦法',
+  '公司治理實務守則',
+];
 ---
 
 <SubPageLayout
@@ -20,52 +43,28 @@ const menuItems = [
   menuItems={menuItems}
   activeId="6"
 >
-  <ul>
-    <li>
-      <span style="font-size:20px"><a href="/cjwtw-website/upload/files/2022_05_10_170912.pdf">公司章程</a></span>
-    </li>
-    <li>
-      <span style="font-size:20px"><a href="/cjwtw-website/upload/files/2022_05_10_170952.pdf">董事選舉辦法</a></span>
-    </li>
-    <li>
-      <span style="font-size:20px"><a href="/cjwtw-website/upload/files/2022_05_10_171014.pdf">股東會議事規則</a></span>
-    </li>
-    <li>
-      <span style="font-size:20px"><a href="/cjwtw-website/upload/files/2022_05_10_171142.pdf">董事會議事規範</a></span>
-    </li>
-    <li>
-      <span style="font-size:20px"
-        ><a href="/cjwtw-website/upload/files/2022_05_10_171157.pdf">薪資報酬委員會組織章程</a></span>
-    </li>
-    <li>
-      <span style="font-size:20px"
-        ><a href="/cjwtw-website/upload/files/2022_05_10_171233.pdf">審計委員會組織章程</a></span>
-    </li>
-    <li>
-      <span style="font-size:20px"
-        ><a href="/cjwtw-website/upload/files/2022_05_10_171505.pdf">取得或處分資產處理程序</a></span>
-    </li>
-    <li>
-      <span style="font-size:20px"
-        ><a href="/cjwtw-website/upload/files/2022_05_10_171625.pdf">資金貸與他人作業辦法</a></span>
-    </li>
-    <li>
-      <span style="font-size:20px"
-        ><a href="/cjwtw-website/upload/files/2022_05_10_171654.pdf">背書保證作業辦法</a></span>
-    </li>
-    <li>
-      <span style="font-size:20px"
-        ><a href="/cjwtw-website/upload/files/2022_05_10_171821.pdf">誠信經營作業程序及行為指南</a></span>
-    </li>
-    <li>
-      <span style="font-size:20px"
-        ><a href="/cjwtw-website/upload/files/2022_05_10_171845.pdf">企業社會責任實務守則</a></span>
-    </li>
-    <li><span style="font-size:20px">董事及監察人選舉辦法</span></li>
-    <li><span style="font-size:20px">道德行為準則</span></li>
-    <li><span style="font-size:20px">防範內線交易之管理</span></li>
-    <li><span style="font-size:20px">檢舉非法與不道德或不誠信行為案件之處理辦法</span></li>
-    <li><span style="font-size:20px">董事會績效評估辦法</span></li>
-    <li><span style="font-size:20px">公司治理實務守則</span></li>
-  </ul>
+  <h2 class="text-xl font-bold text-primary mb-6 border-b border-gold/30 pb-2">公司治理相關程序及辦法</h2>
+
+  <div class="grid gap-3 sm:grid-cols-2">
+    {docs.map((doc) => (
+      <a
+        href={doc.href}
+        target="_blank"
+        class="flex items-center gap-3 rounded-lg border border-gray-200 px-4 py-3 text-base transition hover:border-gold hover:bg-gold/5"
+      >
+        <svg class="h-5 w-5 shrink-0 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M4 18h12a2 2 0 002-2V6l-4-4H6a2 2 0 00-2 2v12a2 2 0 002 2zm8-14l4 4h-4V4zM6 9h8v2H6V9zm0 4h8v2H6v-2z" />
+        </svg>
+        <span>{doc.name}</span>
+      </a>
+    ))}
+    {docsNoLink.map((name) => (
+      <div class="flex items-center gap-3 rounded-lg border border-gray-100 bg-gray-50 px-4 py-3 text-base text-gray-500">
+        <svg class="h-5 w-5 shrink-0 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M4 18h12a2 2 0 002-2V6l-4-4H6a2 2 0 00-2 2v12a2 2 0 002 2zm8-14l4 4h-4V4zM6 9h8v2H6V9zm0 4h8v2H6v-2z" />
+        </svg>
+        <span>{name}</span>
+      </div>
+    ))}
+  </div>
 </SubPageLayout>
